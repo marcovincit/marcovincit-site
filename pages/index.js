@@ -1,65 +1,40 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import Image from "../components/Image";
+import Body1 from "../components/Typography/Body1";
+import Grid from "../components/Grid";
 
-export default function Home() {
+import { SmoothScrollProvider } from "../contexts/SmoothScroll.context";
+
+export default function IndexPage() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Grid>
+      <div>
+        <Body1>Marco Vincit</Body1>
+        <Body1>© 2021</Body1>
+      </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <div>
+        <Body1>
+          Just a designer <br /> who loves code <br /> and music.
+        </Body1>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Body1>Works →</Body1>
+        <Body1>
+          São Paulo <br /> Brazil
+        </Body1>
+      </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <div>
+        <Body1>About</Body1>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <Body1>
+          hello@marcovincit.com
+          <br />
+          +55 11 95366.8661
+        </Body1>
+      </div>
+    </Grid>
+  );
 }

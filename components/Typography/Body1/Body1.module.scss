@@ -1,0 +1,13 @@
+@import "styles/breakpoints.scss";
+
+.Body1 {
+  font-size: 3.6rem;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  margin: 0;
+
+  @include for-size(sm) {
+    font-size: 3.6rem;
+  }
+}

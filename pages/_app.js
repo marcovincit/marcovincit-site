@@ -1,7 +1,9 @@
-import '../styles/globals.css'
+import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <main data-scroll-container className="container">
+      <Component {...pageProps} />
+    </main>
+  );
 }
-
-export default MyApp

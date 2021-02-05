@@ -1,0 +1,35 @@
+@import "./breakpoints.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Acumin Pro", sans-serif;
+  font-style: normal;
+  // overscroll-behavior: none;
+}
+
+html {
+  font-size: 10px;
+  @include for-size(lg) {
+    font-size: calc(100vw / 1920 * 10);
+  }
+}
+
+body {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 160%;
+  letter-spacing: -0.025em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--background);
+  color: var(--text-color);
+  transition: color 300ms, background 300ms;
+
+  @include for-size(lg) {
+    font-size: 1.8rem;
+  }
+}
