@@ -20,14 +20,13 @@ export default function IndexPage() {
           Just a designer <br /> who loves code <br /> and music.
         </Body1>
 
-        <Body1>Works →</Body1>
         <Body1>
           São Paulo <br /> Brazil
         </Body1>
       </div>
 
       <div>
-        <Body1>About</Body1>
+        <Body1>Works →</Body1>
 
         <Body1>
           hello@marcovincit.com
