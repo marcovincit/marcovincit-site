@@ -1,12 +1,12 @@
-import styles from "./Body1.module.scss";
+import styles from "./Display.module.scss";
 import classNames from "classnames";
 
-export default function Body1(props) {
+export default function Display(props) {
   const { align, as, color, children, className } = props;
-  const TagName = as ? as : "p";
+  const TagName = as ? as : "h1";
   const classes = classNames(
-    styles.Body1,
-    "Body1",
+    styles.Display,
+    "Display",
     {
       [`text-${color}`]: color,
       [`text-${align}`]: align,

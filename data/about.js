@@ -5,7 +5,7 @@ export default {
 
   // CLIENTS
   clients: {
-    title: "Some clients that I had the pleasure to work with",
+    title: ["Some clients that", "I had the pleasure", "to work with"],
     content: [
       "Aesop",
       "Agile Arquitetura",
@@ -25,7 +25,7 @@ export default {
       "Flying Horse",
       "Focus Arquitetura",
       "Globo",
-      "Gol",
+      "Gol Linhas Aéreas",
       "Goldman Sachs",
       "Governo de Minas Gerais",
       "Havaianas",
@@ -149,24 +149,17 @@ export default {
       },
 
       {
-        date: "May 2014 – Jun 2016",
-        name: "Plan B Comunicação",
-        label: "Designer",
-        location: "Belo Horizonte, Brasil",
-      },
-
-      {
-        date: "Mar 2020 – Dez 2020",
-        name: "Rebel",
-        label: "Head of Design",
-        location: "São Paulo, Brazil",
-      },
-
-      {
         date: "Apr 2016 – Aug 2016",
         name: "Yellow Hi",
         label: "Designer",
         location: "London, UK",
+      },
+
+      {
+        date: "May 2014 – Jun 2016",
+        name: "Plan B Comunicação",
+        label: "Designer",
+        location: "Belo Horizonte, Brasil",
       },
 
       {
@@ -181,57 +174,54 @@ export default {
   // PUBLICATIONS
   publications: {
     title: "Publications",
-    content: [
-      {
-        title: "Online",
-        content: [
-          {
-            name: "99U",
-            link: "https://goo.gl/75uCms",
-            label:
-              "Get Noticed in a Crowded Marketplace By Challenging the Design Tropes",
-          },
-          {
-            name: "AIGA Eye on Design",
-            link: "https://goo.gl/A8wEzq",
-            label: "Happy Hour: Worldly brews and wines",
-          },
-          {
-            name: "The Dieline",
-            link: "https://goo.gl/QBmxwJ",
-          },
-          {
-            name: "Packaging of the World",
-            link: "https://goo.gl/st3Pim",
-          },
-          {
-            name: "CreativeDoc.",
-            link: "https://goo.gl/3K8C1n",
-          },
-        ],
-      },
-
-      {
-        title: "Press",
-        content: [
-          {
-            name: "Sandu Publishing",
-            link: "https://goo.gl/9nCmHV",
-            label: "Shapes, Geometric Forms in Graphic Design",
-          },
-          {
-            name: "Viction:ary",
-            link: "https://goo.gl/WNpr9a",
-            label: "Less is More, Limited colour graphics in design",
-          },
-          {
-            name: "Send Points",
-            link: "https://goo.gl/XEHA1z",
-            label: "Remarkable graphic styles — Void",
-          },
-        ],
-      },
-    ],
+    online: {
+      title: "Online",
+      content: [
+        {
+          name: "99U",
+          link: "https://goo.gl/75uCms",
+          label:
+            "Get Noticed in a Crowded Marketplace By Challenging the Design Tropes",
+        },
+        {
+          name: "AIGA Eye on Design",
+          link: "https://goo.gl/A8wEzq",
+          label: "Happy Hour: Worldly brews and wines",
+        },
+        {
+          name: "The Dieline",
+          link: "https://goo.gl/QBmxwJ",
+        },
+        {
+          name: "Packaging of the World",
+          link: "https://goo.gl/st3Pim",
+        },
+        {
+          name: "CreativeDoc.",
+          link: "https://creativedoc.co/entrevistas/marco-vincit",
+        },
+      ],
+    },
+    press: {
+      title: "Press",
+      content: [
+        {
+          name: "Sandu Publishing",
+          link: "https://goo.gl/9nCmHV",
+          label: "Shapes, Geometric Forms in Graphic Design",
+        },
+        {
+          name: "Viction:ary",
+          link: "https://goo.gl/WNpr9a",
+          label: "Less is More, Limited colour graphics in design",
+        },
+        {
+          name: "Send Points",
+          link: "https://goo.gl/XEHA1z",
+          label: "Remarkable graphic styles — Void",
+        },
+      ],
+    },
   },
 
   // AWARDS

@@ -1,0 +1,20 @@
+@import "styles/breakpoints.scss";
+.Display {
+  font-size: 7.2rem;
+  line-height: 90%;
+  letter-spacing: -0.1em;
+  margin: 2rem 0 2rem -0.05em;
+  font-weight: 300;
+
+  @include for-size(sm) {
+    font-size: 9.6rem;
+  }
+
+  @include for-size(md) {
+    font-size: 14.4rem;
+  }
+
+  @include for-size(lg) {
+    font-size: 42.66rem;
+  }
+}
