@@ -1,7 +1,11 @@
 export default {
   title: "About",
-  text:
-    "I am a Brazilian designer focused on digital experience. I love graphic design and always try to bring references to the digital experience. I’ve worked with Amazon, Havaianas, Petrobras, Vivo, FIEMG, Globo, Goldman Sachs, Santander, Cartão Elo, Algar Telecom, Flying Horse, Iveco, Usiminas, among others.",
+  text: [
+    "Hello, I'm a Brazilian designer and web developer.",
+    "I'm from Brumadinho (Minas Gerais), where <a href='https://www.inhotim.org.br/' target='_blank' rel='noopener noreferrer'>Inhotim</a> is located, one of the most important collections of contemporary art and the largest open air museum in the world.",
+    "I love graphic design, modernist and contemporany art and always try to bring those references to the digital experience.",
+    "I have worked with important brands, such as Amazon, Havaianas, Petrobras, Vivo, Globo, Goldman Sachs, Santander, Cartão Elo, Algar Telecom, Iveco, Usiminas, among others.",
+  ],
 
   // CLIENTS
   clients: {

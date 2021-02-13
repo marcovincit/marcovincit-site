@@ -1,4 +1,16 @@
 @import "./breakpoints.scss";
+@import "./locomotive.scss";
+@import "./normalize.scss";
+
+:root {
+  --text-color: white;
+  --background: black;
+}
+
+::selection {
+  color: inherit;
+  background: transparent;
+}
 
 html,
 body {
@@ -29,16 +41,18 @@ body {
   color: var(--text-color);
   transition: color 300ms, background 300ms;
 
+  padding: 6rem;
+
   @include for-size(lg) {
     font-size: 1.8rem;
   }
 }
 
 hr {
-  margin: 0;
+  margin: 6rem 0;
   padding: 0;
   border: none;
-  border-top: solid 1px #000;
+  border-top: solid 2px var(--text-color);
 }
 
 ul,
@@ -61,6 +75,30 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: line-through;
+    opacity: 0.8;
+    // text-decoration: underline;
   }
 }
+
+span {
+  display: inline-block;
+}
+
+//
+
+// li {
+//   opacity: 0;
+//   transition: 1s 300ms;
+//   overflow: hidden;
+//   span {
+//     transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+//     transform: translateY(100%);
+//   }
+
+//   &.is-inview {
+//     opacity: 1;
+//     span {
+//       transform: translateY(0%);
+//     }
+//   }
+// }

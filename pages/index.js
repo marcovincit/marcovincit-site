@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "../components/Image";
-import Body1 from "../components/Typography/Body1";
+import Body from "../components/Typography/Body";
 import Grid from "../components/Grid";
 
 import { SmoothScrollProvider } from "../contexts/SmoothScroll.context";
@@ -9,30 +9,33 @@ export default function IndexPage() {
   return (
     <Grid>
       <div>
-        <Body1>Marco Vincit</Body1>
-        <Body1>© 2021</Body1>
+        <Body>Marco Vincit</Body>
+        <Body>© 2021</Body>
       </div>
 
       <div />
 
       <div>
-        <Body1>
+        <Body>
           Just a designer <br /> who loves code <br /> and music.
-        </Body1>
+        </Body>
 
-        <Body1>
+        <Body>
           São Paulo <br /> Brazil
-        </Body1>
+        </Body>
       </div>
 
       <div>
-        <Body1>Works →</Body1>
+        <Body>
+          <Link href="about">About →</Link>
+        </Body>
+        <Body>Works →</Body>
 
-        <Body1>
+        <Body>
           hello@marcovincit.com
           <br />
           +55 11 95366.8661
-        </Body1>
+        </Body>
       </div>
     </Grid>
   );
