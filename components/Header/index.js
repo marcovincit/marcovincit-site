@@ -27,11 +27,14 @@ export default function Header() {
         >
           <Body>
             Just a designer <br /> who loves code <br /> and music.
-            <br />
-            <br />
-            São Paulo <br /> Brazil
           </Body>
         </div>
+
+        {/* <Body>
+          <Link href="/works">
+            <a>Works →</a>
+          </Link>
+        </Body> */}
       </Grid>
     </header>
   );

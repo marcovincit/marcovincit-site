@@ -1,0 +1,18 @@
+@import "styles/breakpoints.scss";
+
+.container {
+  min-height: calc(100vh - 6rem);
+  padding: 3rem;
+
+  position: relative;
+  z-index: 100;
+
+  @include for-size(md) {
+    min-height: calc(100vh - 12rem);
+    padding: 6rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}

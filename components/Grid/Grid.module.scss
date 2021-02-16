@@ -4,13 +4,13 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 6rem 6rem;
+  gap: 10rem 10rem;
 
   @include for-size(lg) {
     grid-template-columns: repeat(4, 1fr);
   }
 
   > * {
-    grid-column: span / 1;
+    grid-column: auto / 1 span;
   }
 }

@@ -3,11 +3,17 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .image {
-  width: 40%;
+  grid-column: 2 / 4;
+
+  img {
+    width: 100%;
+    height: auto;
+    // display: none;
+  }
 }
