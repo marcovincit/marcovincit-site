@@ -26,12 +26,14 @@ export default function About() {
       <Header />
 
       <section data-scroll-section>
-        <hr
+        <div
           data-scroll
           data-scroll-speed={8}
           data-scroll-position="top"
           data-scroll-delay={0.1}
-        />
+        >
+          <hr data-scroll />
+        </div>
 
         <Display number>
           {year.map((item, key) => (
@@ -47,19 +49,20 @@ export default function About() {
           ))}
         </Display>
 
-        <hr
+        <div
           data-scroll
           data-scroll-speed={5}
           data-scroll-position="top"
           data-scroll-delay={0.1}
-        />
+        >
+          <hr data-scroll />
+        </div>
       </section>
 
       <Photo />
 
-      <hr data-scroll-section />
-
       <section data-scroll-section>
+        <hr data-scroll />
         <Grid>
           <Body as="h3">{data.title}</Body>
           <Body>
@@ -70,9 +73,8 @@ export default function About() {
         </Grid>
       </section>
 
-      <hr data-scroll-section />
-
       <section data-scroll-section>
+        <hr data-scroll />
         <Grid>
           <Body as="h3">{data.experience.title}</Body>
           <List>
@@ -95,9 +97,8 @@ export default function About() {
         </Grid>
       </section>
 
-      <hr data-scroll-section />
-
       <section data-scroll-section>
+        <hr data-scroll />
         <Grid>
           <Body as="h3">
             {data.clients.title.map((item, key) => (
@@ -118,30 +119,31 @@ export default function About() {
         </Grid>
       </section>
 
-      <hr data-scroll-section />
-
       <section data-scroll-section>
+        <hr data-scroll />
         <Grid>
           <Body as="h3">{data.side.title}</Body>
           <List>
             {data.side.content.map(({ link, name, type, date }, key) => (
-              <Body key={key} as="li">
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  {name}
-                  <br />
-                  {type}
-                  <br />
-                  {date}
-                </a>
-              </Body>
+              <li data-scroll>
+                <Body key={key} as="span">
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    {name}
+                    <br />
+                    {type}
+                    <br />
+                    {date}
+                  </a>
+                </Body>
+              </li>
             ))}
           </List>
         </Grid>
       </section>
 
-      <hr data-scroll-section />
-
       <section data-scroll-section>
+        <hr data-scroll />
+
         <Grid>
           <Body as="h3">{data.publications.title}</Body>
           <section>
@@ -150,37 +152,40 @@ export default function About() {
             <ul>
               {data.publications.online.content.map(
                 ({ link, name, label, date }, key) => (
-                  <Body key={key} as="li">
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      {name}
-                      <br />
-                      {label}
-                      {label ? <br /> : null}
-                      {date}
-                    </a>
-                  </Body>
+                  <li data-scroll>
+                    <Body key={key} as="span">
+                      <a href={link} target="_blank" rel="noopener noreferrer">
+                        {name}
+                        <br />
+                        {label}
+                        {label ? <br /> : null}
+                        {date}
+                      </a>
+                    </Body>
+                  </li>
                 )
               )}
             </ul>
           </section>
 
-          <hr data-scroll-section />
-
           <section>
             <Body as="h4">{data.publications.press.title}</Body>
+            <br />
             <ul>
               {data.publications.press.content.map(
                 ({ link, name, label, date }, key) => (
-                  <Body key={key} as="li">
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      {name}
-                      <br />
-                      {label}
-                      {label ? <br /> : null}
+                  <li data-scroll>
+                    <Body key={key} as="span">
+                      <a href={link} target="_blank" rel="noopener noreferrer">
+                        {name}
+                        <br />
+                        {label}
+                        {label ? <br /> : null}
 
-                      {date}
-                    </a>
-                  </Body>
+                        {date}
+                      </a>
+                    </Body>
+                  </li>
                 )
               )}
             </ul>
@@ -188,22 +193,23 @@ export default function About() {
         </Grid>
       </section>
 
-      <hr data-scroll-section />
-
       <section data-scroll-section>
+        <hr data-scroll />
         <Grid>
           <Body as="h3">{data.awards.title}</Body>
           <List>
             {data.awards.content.map(({ link, name, label, date }, key) => (
-              <Body key={key} as="li">
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  {name}
-                  <br />
-                  {label}
-                  <br />
-                  {date}
-                </a>
-              </Body>
+              <li data-scroll>
+                <Body key={key} as="span">
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    {name}
+                    <br />
+                    {label}
+                    <br />
+                    {date}
+                  </a>
+                </Body>
+              </li>
             ))}
           </List>
         </Grid>

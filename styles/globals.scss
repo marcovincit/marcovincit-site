@@ -3,8 +3,15 @@
 @import "./normalize.scss";
 
 :root {
-  --text-color: white;
-  --background: black;
+  --text-color: black;
+  --background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: rgb(233, 233, 233);
+    --background: rgb(29, 29, 29);
+  }
 }
 
 ::selection {
@@ -41,7 +48,11 @@ body {
   color: var(--text-color);
   transition: color 300ms, background 300ms;
 
-  padding: 6rem;
+  padding: 3rem;
+
+  @include for-size(md) {
+    padding: 6rem;
+  }
 
   @include for-size(lg) {
     font-size: 1.8rem;
@@ -52,7 +63,15 @@ hr {
   margin: 6rem 0;
   padding: 0;
   border: none;
-  border-top: solid 2px var(--text-color);
+  border-top: solid 1px var(--text-color);
+
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  &.is-inview {
+    transform: scaleX(1);
+  }
 }
 
 ul,
@@ -86,19 +105,11 @@ span {
 
 //
 
-// li {
-//   opacity: 0;
-//   transition: 1s 300ms;
-//   overflow: hidden;
-//   span {
-//     transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-//     transform: translateY(100%);
-//   }
+li {
+  opacity: 0;
+  transition: 1s;
 
-//   &.is-inview {
-//     opacity: 1;
-//     span {
-//       transform: translateY(0%);
-//     }
-//   }
-// }
+  &.is-inview {
+    opacity: 1;
+  }
+}

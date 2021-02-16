@@ -1,9 +1,14 @@
+@import "styles/breakpoints.scss";
+
 .grid {
   width: 100%;
-  // padding: 6rem 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 6rem 6rem;
+
+  @include for-size(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   > * {
     grid-column: span / 1;
