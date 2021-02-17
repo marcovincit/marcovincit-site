@@ -31,7 +31,7 @@ export default function IndexPage() {
           </Body>
         </Grid>
         <Grid>
-          <Body>© 2021</Body>
+          <Body>© 2008 — 2021</Body>
 
           <div />
 

@@ -19,12 +19,16 @@
   width: 100%;
 
   position: absolute;
-  top: 6rem;
+  top: 18rem;
   left: 0;
 
   z-index: 20;
 }
 
 .title {
-  grid-column: 3/5;
+  grid-column: 2/5;
+}
+
+.black {
+  color: white;
 }

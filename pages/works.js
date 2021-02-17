@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-import data from "data/about";
-import info from "data/info";
+import works from "data/works";
 
 import { SmoothScrollProvider } from "contexts/SmoothScroll.context";
 
@@ -34,36 +33,15 @@ export default function Works() {
 
         {/* list */}
 
-        <Cover src="/works/cover.jpg" href="#">
-          Breves Bandeiras
-          <br />
-          Online Auction <br />
-          2017
-        </Cover>
-        <Cover src="/works/cover.jpg" href="#">
-          Breves Bandeiras
-          <br />
-          Online Auction <br />
-          2017
-        </Cover>
-        <Cover src="/works/cover.jpg" href="#">
-          Breves Bandeiras
-          <br />
-          Online Auction <br />
-          2017
-        </Cover>
-        <Cover src="/works/cover.jpg" href="#">
-          Breves Bandeiras
-          <br />
-          Online Auction <br />
-          2017
-        </Cover>
-        <Cover src="/works/cover.jpg" href="#">
-          Breves Bandeiras
-          <br />
-          Online Auction <br />
-          2017
-        </Cover>
+        {works.projects.map(({ name, date, type, link, cover, black }) => (
+          <Cover cover={cover} href={link} black={black}>
+            {name}
+            <br />
+            {type}
+            <br />
+            {date}
+          </Cover>
+        ))}
 
         {/*  */}
 

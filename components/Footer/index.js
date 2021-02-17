@@ -12,8 +12,8 @@ export default function Footer() {
     <footer data-scroll-section>
       <hr data-scroll />
       <Grid>
-        <div style={{ gridColumn: "2 /  1 span" }}>
-          <Body>© 2021 </Body>
+        <div style={{ gridColumn: "1 /  1 span" }}>
+          <Body>© 2008 — 2021 </Body>
         </div>
 
         <div style={{ gridColumn: "3 /  2 span" }}>
