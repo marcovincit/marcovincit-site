@@ -9,7 +9,7 @@ import { SmoothScrollProvider } from "../contexts/SmoothScroll.context";
 
 export default function IndexPage() {
   return (
-    <SmoothScrollProvider options={{ smooth: true }}>
+    <>
       <Container>
         <Grid>
           <Body>
@@ -47,6 +47,6 @@ export default function IndexPage() {
         </Grid>
       </Container>
       <Reel />
-    </SmoothScrollProvider>
+    </>
   );
 }

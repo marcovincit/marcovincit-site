@@ -25,6 +25,14 @@ export default {
     },
 
     {
+      name: "Vivo Easy",
+      type: "App",
+      date: "2017",
+      link: "https://goo.gl/DYJzrb",
+      cover: "/works/vivo/cover.jpg",
+    },
+
+    {
       name: "Behance Reviews 11th",
       type: "Digital Identity",
       black: true,
