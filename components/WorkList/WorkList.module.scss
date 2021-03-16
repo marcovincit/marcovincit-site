@@ -1,0 +1,42 @@
+@import "styles/breakpoints.scss";
+
+.list{
+  &:hover {
+    .item {
+      opacity: 0.05;
+      transition: 300ms;
+
+      &:hover {
+        opacity: 1; 
+        transition: 300ms;
+        .arrow {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.arrow {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.item {
+  border-top: solid 1px var(--text-color);
+  border-bottom: solid 1px var(--text-color);
+
+  margin: 0 0 -1px 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.link {
+  padding: 3rem 0;
+
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+}

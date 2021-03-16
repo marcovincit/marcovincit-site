@@ -13,7 +13,7 @@ import Body from "components/Typography/Body";
 
 import Container from "components/Container";
 import Grid from "components/Grid";
-import List from "components/List";
+import WorkList from "components/WorkList";
 
 import Cover from "components/Cover";
 
@@ -28,25 +28,21 @@ export default function Works() {
         <Header />
 
         <section data-scroll-section>
-          <Display>Works ↓</Display>
+          <div data-scroll data-scroll-speed={1} data-scroll-position="top">
+            <Display>Works</Display>
+          </div>
         </section>
 
         {/* list */}
 
-        {works.projects.map(({ name, date, type, link, cover, black }) => (
-          <Cover cover={cover} href={link} black={black}>
-            {name}
-            <br />
-            {type}
-            <br />
-            {date}
-          </Cover>
-        ))}
+        <section data-scroll-section>
+          <WorkList data={works.projects} />
+        </section>
 
         {/*  */}
 
         <section data-scroll-section>
-          <hr data-scroll />
+          {/* <hr data-scroll /> */}
           <Display>
             <Link href="/about">
               <a>About →</a>
