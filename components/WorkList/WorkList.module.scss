@@ -1,14 +1,14 @@
 @import "styles/breakpoints.scss";
 
-.list{
+.list {
   &:hover {
     .item {
       opacity: 0.05;
       transition: 300ms;
 
       &:hover {
-        opacity: 1; 
-        transition: 300ms;
+        opacity: 1;
+        transition: opacity 300ms;
         .arrow {
           opacity: 1;
         }
@@ -19,7 +19,7 @@
 
 .arrow {
   opacity: 0;
-  transition: 300ms;
+  transition: opacity 300ms;
 }
 
 .item {
@@ -33,7 +33,6 @@
 
 .link {
   padding: 3rem 0;
-
 }
 
 .date {

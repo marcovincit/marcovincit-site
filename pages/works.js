@@ -14,6 +14,7 @@ import Body from "components/Typography/Body";
 import Container from "components/Container";
 import Grid from "components/Grid";
 import WorkList from "components/WorkList";
+import Circle from "components/Circle";
 
 import Cover from "components/Cover";
 
@@ -33,16 +34,17 @@ export default function Works() {
           </div>
         </section>
 
-        {/* list */}
+        <div className="space-11" />
 
         <section data-scroll-section>
           <WorkList data={works.projects} />
         </section>
 
-        {/*  */}
+        <section data-scroll-section>
+          <Circle />
+        </section>
 
         <section data-scroll-section>
-          {/* <hr data-scroll /> */}
           <Display>
             <Link href="/about">
               <a>About →</a>

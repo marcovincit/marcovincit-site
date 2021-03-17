@@ -103,3 +103,9 @@ li {
     opacity: 1;
   }
 }
+
+@for $i from 1 through 20 {
+  .space-#{$i} {
+    height: #{$i}rem;
+  }
+}
