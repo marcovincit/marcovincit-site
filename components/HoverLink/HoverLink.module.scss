@@ -1,0 +1,22 @@
+.container {
+  overflow: hidden;
+  position: relative;
+  display: block;
+
+  span {
+    transition: transform 300ms;
+    animation: hover 1s forwards reverse;
+  }
+
+  span:last-child {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &:hover {
+    span {
+      animation: hover 1s forwards;
+    }
+  }
+}

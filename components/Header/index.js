@@ -1,8 +1,12 @@
+import styles from "./Header.module.scss";
+
 import Link from "next/link";
 import Grid from "components/Grid";
 import Body from "components/Typography/Body";
 
-export default function Header() {
+import HoverLink from "components/HoverLink";
+
+export default function Header({ about }) {
   return (
     <header data-scroll-section>
       <Grid>
@@ -30,11 +34,26 @@ export default function Header() {
           </Body>
         </div>
 
-        {/* <Body>
-          <Link href="/works">
-            <a>Works →</a>
-          </Link>
-        </Body> */}
+        <div
+          data-scroll
+          data-scroll-speed={8}
+          data-scroll-position="top"
+          data-scroll-delay={0.1}
+        >
+          <Body>
+            {about ? (
+              <Link href="/about">
+                <a className={styles.link}>
+                  <HoverLink label="About" />
+                </a>
+              </Link>
+            ) : (
+              <Link href="/works">
+                <a className={styles.link}>Works</a>
+              </Link>
+            )}
+          </Body>
+        </div>
       </Grid>
     </header>
   );

@@ -26,7 +26,7 @@ export default function Works() {
   return (
     <SmoothScrollProvider options={{ smooth: true }}>
       <Container>
-        <Header />
+        <Header about />
 
         <section data-scroll-section>
           <div data-scroll data-scroll-speed={1} data-scroll-position="top">
