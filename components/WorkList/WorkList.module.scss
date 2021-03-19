@@ -4,7 +4,7 @@
   &:hover {
     .item {
       opacity: 0.05;
-      transition: 300ms;
+      transition: opacity 800ms;
 
       &:hover {
         opacity: 1;

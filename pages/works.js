@@ -16,6 +16,8 @@ import Grid from "components/Grid";
 import WorkList from "components/WorkList";
 import Circle from "components/Circle";
 
+import HoverLink from "components/HoverLink";
+
 import Cover from "components/Cover";
 
 import parse from "html-react-parser";
@@ -47,7 +49,9 @@ export default function Works() {
         <section data-scroll-section>
           <Display>
             <Link href="/about">
-              <a>About →</a>
+              <a>
+                <HoverLink label="About →" />
+              </a>
             </Link>
           </Display>
         </section>

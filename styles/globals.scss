@@ -3,14 +3,14 @@
 @import "./normalize.scss";
 
 :root {
-  --text-color: #121212;
-  --background: #ffffff;
+  --text-color: #000;
+  --background: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #ffffff;
-    --background: #121212;
+    --text-color: #fff;
+    --background: #000;
   }
 }
 
@@ -23,7 +23,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Acumin Pro", sans-serif;
+  font-family: "Wayfinder CF", sans-serif;
   font-style: normal;
   overscroll-behavior: none;
 }
@@ -39,7 +39,7 @@ body {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 160%;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.025em !important;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
