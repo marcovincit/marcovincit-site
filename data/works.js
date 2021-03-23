@@ -8,6 +8,7 @@ export default {
       date: "2019",
       link: "https://goo.gl/DYJzrb",
       cover: "/works/havaianas/cover.jpg",
+      theme: "havaianas",
     },
     {
       name: "TEDx Mariana",
@@ -15,6 +16,7 @@ export default {
       date: "2017",
       link: "https://goo.gl/DYJzrb",
       cover: "/works/tedx/cover.jpg",
+      theme: "tedx",
     },
     {
       name: "Amazon Echo",
@@ -22,6 +24,7 @@ export default {
       date: "2017",
       link: "https://goo.gl/DYJzrb",
       cover: "/works/amazon/cover.jpg",
+      theme: "amazon",
     },
 
     {
@@ -30,6 +33,7 @@ export default {
       date: "2017",
       link: "https://goo.gl/DYJzrb",
       cover: "/works/vivo/cover.jpg",
+      theme: "vivo",
     },
 
     {
@@ -39,6 +43,7 @@ export default {
       date: "2018",
       link: "https://goo.gl/DYJzrb",
       cover: "/works/behance/cover.jpg",
+      theme: "behance",
     },
 
     {
@@ -47,6 +52,7 @@ export default {
       date: "2017",
       link: "https://goo.gl/DYJzrb",
       cover: "/works/brevesbandeiras/cover.jpg",
+      theme: "brevesbandeiras",
     },
   ],
 };

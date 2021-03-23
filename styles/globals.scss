@@ -23,7 +23,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Wayfinder CF", sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   overscroll-behavior: none;
 }
@@ -39,7 +39,7 @@ body {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 160%;
-  letter-spacing: -0.025em !important;
+  letter-spacing: -0.025em;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

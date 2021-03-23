@@ -15,5 +15,9 @@ export default function Display(props) {
     className
   );
 
-  return <TagName className={classes}>{children}</TagName>;
+  return (
+    <TagName data-scroll className={classes}>
+      {children}
+    </TagName>
+  );
 }
