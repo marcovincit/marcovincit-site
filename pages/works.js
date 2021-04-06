@@ -50,7 +50,7 @@ export default function Works() {
           <Display>
             <Link href="/about">
               <a>
-                <HoverLink label="About →" />
+                <HoverLink label="About" />
               </a>
             </Link>
           </Display>

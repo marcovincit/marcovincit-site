@@ -8,38 +8,23 @@ import HoverLink from "components/HoverLink";
 
 export default function Header({ about }) {
   return (
-    <header data-scroll-section>
+    <header className={styles.header}>
       <Grid>
-        <div
-          data-scroll
-          data-scroll-speed={8}
-          data-scroll-position="top"
-          data-scroll-delay={0.1}
-        >
+        <div>
           <Body>
-            <Link href="/">Marco Vincit</Link>
+            <Link href="/">
+              <a>
+                Marco Vincit
+                <br />
+                Design & Development
+              </a>
+            </Link>
           </Body>
         </div>
 
         <div />
 
-        <div
-          data-scroll
-          data-scroll-speed={8}
-          data-scroll-position="top"
-          data-scroll-delay={0.1}
-        >
-          <Body>
-            Just a designer <br /> who loves code <br /> and music.
-          </Body>
-        </div>
-
-        <div
-          data-scroll
-          data-scroll-speed={8}
-          data-scroll-position="top"
-          data-scroll-delay={0.1}
-        >
+        <div>
           <Body>
             {about ? (
               <Link href="/about">
@@ -49,9 +34,19 @@ export default function Header({ about }) {
               </Link>
             ) : (
               <Link href="/works">
-                <a className={styles.link}>Works</a>
+                <a className={styles.link}>
+                  <HoverLink label="Works" />
+                </a>
               </Link>
             )}
+          </Body>
+        </div>
+
+        <div>
+          <Body align="right">
+            <Link href="/about">
+              <a>+</a>
+            </Link>
           </Body>
         </div>
       </Grid>

@@ -230,7 +230,7 @@ export default {
 
   // AWARDS
   awards: {
-    title: "Featured & Awards",
+    title: ["Featured", "& Awards"],
     content: [
       {
         link: "https://brazilianswho.design/",

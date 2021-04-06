@@ -3,13 +3,12 @@
 .Display {
   font-size: 7.2rem;
 
-  letter-spacing: -0.075em;
-  font-weight: 300;
+  letter-spacing: -0.05em;
+  font-weight: 400;
 
-  margin: 8rem 0 8rem -0.05em;
+  margin: 20rem 0 10rem;
 
-  line-height: 93%;
-  height: 0.695em;
+  line-height: 80%;
 
   @include for-size(sm) {
     font-size: 9.6rem;
@@ -20,11 +19,7 @@
   }
 
   @include for-size(lg) {
-    font-size: 44.76rem;
+    font-size: 38.6603rem;
+    margin-left: -0.068em;
   }
-}
-
-.number {
-  line-height: 85%;
-  height: 0.658em;
 }

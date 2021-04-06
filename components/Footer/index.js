@@ -11,6 +11,7 @@ export default function Footer() {
   return (
     <footer data-scroll-section>
       <hr data-scroll />
+      <div className="space-10" />
       <Grid>
         <div style={{ gridColumn: "1 /  1 span" }}>
           <Body>© 2008 — 2021 </Body>
@@ -24,6 +25,7 @@ export default function Footer() {
           </Body>
         </div>
       </Grid>
+      <div className="space-5" />
     </footer>
   );
 }

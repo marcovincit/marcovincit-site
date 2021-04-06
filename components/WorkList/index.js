@@ -34,7 +34,7 @@ export default function WorkList({ data }) {
                   </Body>
                   <Body as="span" className={styles.date}>
                     <span>{date}</span>
-                    <span className={styles.arrow}>→</span>
+                    <span className={styles.arrow}>•</span>
                   </Body>
                 </Grid>
               </a>

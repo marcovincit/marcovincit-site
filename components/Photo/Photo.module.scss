@@ -2,14 +2,14 @@
 
 .container {
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   // display: flex;
   // align-items: center;
   // justify-content: center;
 }
 
 .image {
-  grid-column: 2 / 4;
+  grid-column: 3 / 4;
 
   img {
     width: 100%;

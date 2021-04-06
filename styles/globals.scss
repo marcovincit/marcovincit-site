@@ -1,6 +1,5 @@
 @import "./breakpoints.scss";
 @import "./locomotive.scss";
-@import "./normalize.scss";
 
 :root {
   --text-color: #000;
@@ -23,13 +22,17 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Haas Grot Disp", sans-serif;
   font-style: normal;
   overscroll-behavior: none;
 }
 
 html {
   font-size: 10px;
+
+  background: var(--background);
+  color: var(--text-color);
+
   @include for-size(lg) {
     font-size: calc(100vw / 1920 * 10);
   }
@@ -37,15 +40,12 @@ html {
 
 body {
   font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 160%;
+  font-weight: 45;
   letter-spacing: -0.025em;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: var(--background);
-  color: var(--text-color);
   transition: color 300ms, background 300ms;
 
   @include for-size(lg) {
@@ -53,8 +53,12 @@ body {
   }
 }
 
+b {
+  font-weight: 450;
+}
+
 hr {
-  margin: 6rem 0;
+  margin: 0;
   padding: 0;
   border: none;
   border-top: solid 1px var(--text-color);
@@ -87,6 +91,7 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+  display: inline-block;
 }
 
 span {
@@ -102,10 +107,26 @@ li {
   &.is-inview {
     opacity: 1;
   }
+
+  // @for $i from 1 through 100 {
+  //   &:nth-child(#{$i}).is-inview {
+  //     opacity: 1;
+  //     transition: opacity #{$i * 1}s;
+  //   }
+  // }
 }
 
 @for $i from 1 through 20 {
   .space-#{$i} {
     height: #{$i}rem;
   }
+}
+
+.text-right {
+  text-align: right;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
