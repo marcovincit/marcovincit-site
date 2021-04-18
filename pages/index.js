@@ -12,17 +12,25 @@ export default function IndexPage() {
     <>
       <Container>
         <Header about />
-        <Grid>
-          <Body>Est. 2008</Body>
+        <footer
+          style={{
+            position: "fixed",
+            bottom: "3rem",
+            width: "calc(100% - 6rem)",
+          }}
+        >
+          <Grid>
+            <Body>Est. 2008</Body>
 
-          <div />
+            <div />
 
-          <Body>
-            São Paulo <br /> Brazil
-          </Body>
+            <Body>
+              São Paulo <br /> Brazil
+            </Body>
 
-          <Body align="right">hello@marcovincit.com</Body>
-        </Grid>
+            <Body align="right">hello@marcovincit.com</Body>
+          </Grid>
+        </footer>
       </Container>
       <Reel />
     </>
