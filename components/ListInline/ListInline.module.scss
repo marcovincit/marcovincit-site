@@ -1,15 +1,15 @@
 @import "styles/breakpoints.scss";
 
 .list {
-  grid-column: auto / 3 span;
+  width: 100%;
 
   display: grid;
 
   grid-template-columns: repeat(1, 1fr);
-  gap: 3.6rem 10rem;
+  gap: 2rem 5rem;
 
   @include for-size(lg) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   margin-bottom: 10rem;

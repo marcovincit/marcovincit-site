@@ -3,11 +3,11 @@
 .grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 10rem 10rem;
 
-  @include for-size(lg) {
-    grid-template-columns: repeat(4, 1fr);
+  gap: 5rem 5rem;
+
+  @include for-size(xs) {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   > * {

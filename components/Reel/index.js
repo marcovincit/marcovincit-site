@@ -6,8 +6,8 @@ export default function Reel(props) {
 
   return (
     <TagName className={styles.container}>
-      <video className={styles.video} autoPlay>
-        <source src="home2.mp4" type="video/mp4" />
+      <video className={styles.video} autoPlay muted loop>
+        <source src="home.mp4" type="video/mp4" />
       </video>
     </TagName>
   );

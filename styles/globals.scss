@@ -1,9 +1,11 @@
 @import "./breakpoints.scss";
 @import "./locomotive.scss";
 
+@import url("https://use.typekit.net/dkl1ast.css");
+
 :root {
-  --text-color: #000;
-  --background: #fff;
+  --text-color: #000000;
+  --background: #feff80;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,8 +24,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Haas Grot Disp", sans-serif;
+
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
   font-style: normal;
+
   overscroll-behavior: none;
 }
 
@@ -42,6 +47,8 @@ body {
   font-size: 1.8rem;
   font-weight: 45;
   letter-spacing: -0.025em;
+
+  line-height: 140%;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,7 +88,7 @@ li {
 }
 
 li {
-  padding-bottom: 2em;
+  margin-bottom: 1em;
 
   a {
     display: block;
@@ -129,4 +136,8 @@ li {
 * {
   margin: 0;
   padding: 0;
+}
+
+.space {
+  height: 30rem;
 }

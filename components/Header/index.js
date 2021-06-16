@@ -8,48 +8,38 @@ import HoverLink from "components/HoverLink";
 
 export default function Header({ about }) {
   return (
-    <header className={styles.header}>
-      <Grid>
-        <div>
-          <Body>
-            <Link href="/">
-              <a>
-                Marco Vincit
-                <br />
-                Design & Development
-              </a>
-            </Link>
-          </Body>
-        </div>
+    <>
+      <div>
+        <Link href="/">
+          <a>
+            Marco Vincit
+            <br />
+            Design & Development
+          </a>
+        </Link>
+      </div>
 
-        <div />
+      <div>
+        {about ? (
+          <Link href="/about">
+            <a className={styles.link}>
+              <HoverLink label="About" />
+            </a>
+          </Link>
+        ) : (
+          <Link href="/works">
+            <a className={styles.link}>
+              <HoverLink label="Works" />
+            </a>
+          </Link>
+        )}
+      </div>
 
-        <div>
-          <Body>
-            {about ? (
-              <Link href="/about">
-                <a className={styles.link}>
-                  <HoverLink label="About" />
-                </a>
-              </Link>
-            ) : (
-              <Link href="/works">
-                <a className={styles.link}>
-                  <HoverLink label="Works" />
-                </a>
-              </Link>
-            )}
-          </Body>
-        </div>
-
-        <div>
-          <Body align="right">
-            <Link href="/about">
-              <a>+</a>
-            </Link>
-          </Body>
-        </div>
-      </Grid>
-    </header>
+      <div>
+        <Link href="/about">
+          <a>+</a>
+        </Link>
+      </div>
+    </>
   );
 }

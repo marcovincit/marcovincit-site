@@ -1,31 +1,30 @@
 export default {
-  title: "About",
-  text: [
-    "Hello, I'm a Brazilian designer and web developer.",
-    "I'm from Brumadinho (Minas Gerais), where <a href='https://www.inhotim.org.br/' target='_blank' rel='noopener noreferrer'>Inhotim</a> is located, one of the most important collections of contemporary art and the largest open air museum in the world.",
-    "I love graphic design, modernist and contemporany art and always try to bring those references to the digital experience.",
-    "I have worked with important brands, such as Amazon, Havaianas, Petrobras, Vivo, Globo, Goldman Sachs, Santander, Cartão Elo, Algar Telecom, Iveco, Usiminas, among others.",
-  ],
+  about: {
+    title: "About",
+    content: [
+      "Hello, I'm a Brazilian designer and web developer. I'm from Brumadinho (Minas Gerais), where <a href='https://www.inhotim.org.br/' target='_blank' rel='noopener noreferrer'>Inhotim</a> is located, one of the most important collections of contemporary art and the largest open air museum in the world. I love graphic design, modernist and contemporany art and always try to bring those references to the digital experience. I have worked with important brands, such as Amazon, Havaianas, Petrobras, Vivo, Globo, Goldman Sachs, Santander, Cartão Elo, Algar Telecom, Iveco, Usiminas, among others.",
+    ],
+  },
 
   // CLIENTS
   clients: {
-    title: ["Some clients that", "I had the pleasure", "to work with"],
+    title: "Clients",
     content: [
       "Aesop",
-      "Agile Arquitetura",
+      // "Agile Arquitetura",
       "Algar Telecom",
       "Amazon",
       "Babylon Beach Bar",
-      "Camarím Fit",
+      // "Camarím Fit",
       "Cartão Elo",
-      "CNI",
+      // "CNI",
       "Costa do Sauípe",
       "Descomplica",
       "Direcional Engenharia",
-      "El Portalon",
+      // "El Portalon",
       "Estudio Atmosfera",
       "Facebook",
-      "Faven",
+      // "Faven",
       "Flying Horse",
       "Focus Arquitetura",
       "Globo",
@@ -35,19 +34,19 @@ export default {
       "Havaianas",
       "Icatu Seguros",
       "IESB Centro Universitário",
-      "Instituto Pedro Arthur",
-      "Iveco Brasil",
+      // "Instituto Pedro Arthur",
+      "Iveco Brazil",
       "Mineirão",
       "Mondaine",
       "Pato Fu",
       "Petrobras",
-      "Rafael Maia",
+      // "Rafael Maia",
       "Sistema FIEMG",
       "Seculus Relógios",
-      "Stirling Ackroyd",
+      // "Stirling Ackroyd",
       "Teatro SESI Minas",
       "TEDx Mariana",
-      "Tim Hortons",
+      // "Tim Hortons",
       "Usiminas",
       "Vivo Easy",
     ],
@@ -57,44 +56,39 @@ export default {
   side: {
     title: "Side projects",
     content: [
-      {
-        name: "Estúdio Atmosfera",
-        type: "Brand & Identity",
-        date: "2017",
-      },
-      {
-        name: "BandaSãoSebastião",
-        type: "Web & Brand",
-        date: "2019",
-        link: "https://www.bandasaosebastiao.mus.br/",
-      },
+      // {
+      //   name: "Estúdio Atmosfera",
+      //   type: "Brand & Identity",
+      //   date: "2017",
+      // },
+      // {
+      //   name: "BandaSãoSebastião",
+      //   type: "Web & Brand",
+      //   date: "2019",
+      //   link: "https://www.bandasaosebastiao.mus.br/",
+      // },
       {
         name: "Breves Bandeiras",
         type: "Online Auction",
         date: "2017",
         link: "https://goo.gl/DYJzrb",
       },
-      {
-        name: "Bēhance Reviews BH #11",
-        type: "Identity & Web",
-        date: "2017",
-      },
 
       {
-        name: "Bēhance Reviews BH #11",
+        name: "11th Bēhance Reviews",
         type: "Identity & Web",
         date: "2017",
         link: "https://behancereviewsbh11.netlify.app/",
       },
 
       {
-        name: "Bēhance Reviews BH #10",
+        name: "10th Bēhance Reviews",
         type: "Identity & Web",
         date: "2017",
         link: "https://behancereviewsbh10.netlify.app/",
       },
       {
-        name: "Bēhance Reviews BH #9",
+        name: "9th Bēhance Reviews",
         type: "Identity & Web",
         date: "2017",
       },
@@ -114,11 +108,11 @@ export default {
         type: "Web",
         date: "2021",
       },
-      {
-        name: "O Tempo Leva Tempo",
-        type: "Online Auction",
-        date: "2021",
-      },
+      // {
+      //   name: "O Tempo Leva Tempo",
+      //   type: "Online Auction",
+      //   date: "2021",
+      // },
       {
         name: "Vincit Beer",
         type: "Package",
@@ -132,24 +126,17 @@ export default {
     title: "Experience",
     content: [
       {
-        date: "Jan 2021 – Currently",
-        name: "Open Co",
-        label: "Partner Design",
-        location: "São Paulo, Brazil",
-      },
-
-      {
-        date: "Mar 2020 – Dez 2020",
+        date: "Mar 2020 – Jun 2021",
         name: "Rebel",
         label: "Head of Design",
-        location: "São Paulo, Brazil",
+        location: "Sao Paulo, Brazil",
       },
 
       {
         date: "Jul 2016 – Mar 2020",
         name: "Work & Co",
         label: "Senior Designer",
-        location: "São Paulo, Brazil",
+        location: "Sao Paulo, Brazil",
       },
 
       {
@@ -163,14 +150,14 @@ export default {
         date: "May 2014 – Jun 2016",
         name: "Plan B Comunicação",
         label: "Designer",
-        location: "Belo Horizonte, Brasil",
+        location: "Belo Horizonte, Brazil",
       },
 
       {
         date: "Jan 2014 – May 2014",
         name: "Quartel Design",
         label: "Front-end Engineer",
-        location: "Belo Horizonte, Brasil",
+        location: "Belo Horizonte, Brazil",
       },
     ],
   },
@@ -178,59 +165,58 @@ export default {
   // PUBLICATIONS
   publications: {
     title: "Publications",
-    online: {
-      title: "Online",
-      content: [
-        {
-          name: "99U",
-          link: "https://goo.gl/75uCms",
-          label:
-            "Get Noticed in a Crowded Marketplace By Challenging the Design Tropes",
-        },
-        {
-          name: "AIGA Eye on Design",
-          link: "https://goo.gl/A8wEzq",
-          label: "Happy Hour: Worldly brews and wines",
-        },
-        {
-          name: "The Dieline",
-          link: "https://goo.gl/QBmxwJ",
-        },
-        {
-          name: "Packaging of the World",
-          link: "https://goo.gl/st3Pim",
-        },
-        {
-          name: "CreativeDoc.",
-          link: "https://creativedoc.co/entrevistas/marco-vincit",
-        },
-      ],
-    },
-    press: {
-      title: "Press",
-      content: [
-        {
-          name: "Sandu Publishing",
-          link: "https://goo.gl/9nCmHV",
-          label: "Shapes, Geometric Forms in Graphic Design",
-        },
-        {
-          name: "Viction:ary",
-          link: "https://goo.gl/WNpr9a",
-          label: "Less is More, Limited colour graphics in design",
-        },
-        {
-          name: "Send Points",
-          link: "https://goo.gl/XEHA1z",
-          label: "Remarkable graphic styles — Void",
-        },
-      ],
-    },
+    content: [
+      {
+        name: "Sandu Publishing",
+        link: "https://goo.gl/9nCmHV",
+        label: "Shapes, Geometric Forms in Graphic Design",
+      },
+      {
+        name: "Viction:ary",
+        link: "https://goo.gl/WNpr9a",
+        label: "Less is More, Limited colour graphics in design",
+      },
+      {
+        name: "Send Points",
+        link: "https://goo.gl/XEHA1z",
+        label: "Remarkable graphic styles — Void",
+      },
+    ],
+  },
+
+  // PRESS
+  press: {
+    title: "Press",
+    content: [
+      {
+        name: "99U",
+        link: "https://goo.gl/75uCms",
+        label:
+          "Get Noticed in a Crowded Marketplace By Challenging the Design Tropes",
+      },
+      {
+        name: "AIGA Eye on Design",
+        link: "https://goo.gl/A8wEzq",
+        label: "Happy Hour: Worldly brews and wines",
+      },
+      {
+        name: "The Dieline",
+        link: "https://goo.gl/QBmxwJ",
+      },
+      {
+        name: "Packaging of the World",
+        link: "https://goo.gl/st3Pim",
+      },
+      {
+        name: "CreativeDoc.",
+        link: "https://creativedoc.co/entrevistas/marco-vincit",
+      },
+    ],
   },
 
   // AWARDS
   awards: {
-    title: ["Featured", "& Awards"],
+    title: "Featured",
     content: [
       {
         link: "https://brazilianswho.design/",
