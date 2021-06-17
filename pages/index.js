@@ -1,23 +1,12 @@
-import Link from "next/link";
-import Title from "../components/Typography/Title";
-import Container from "../components/Container";
-
-import Grid from "../components/Grid";
-
-import Header from "components/Header";
-import Reel from "../components/Reel";
+import { SmoothScrollProvider } from "contexts/SmoothScroll.context";
 
 import parse from "html-react-parser";
-
 import data from "data/about";
 
-import { SmoothScrollProvider } from "../contexts/SmoothScroll.context";
-
-import styles from "styles/Home.module.scss";
-import List from "components/List";
-import ListInline from "components/ListInline";
+import Title from "components/Typography/Title";
+import Container from "components/Container";
+import Grid from "components/Grid";
 import Photo from "components/Photo";
-import Circle from "components/Circle";
 
 export default function IndexPage() {
   return (
@@ -35,11 +24,9 @@ export default function IndexPage() {
           {/* ABOUT */}
           <div>
             <Title as="h2">{data.about.title} {" "} <span className='mark'>■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ </span> {" "} </Title>
-            <p data-scroll>
-              {parse(`
+            {parse(`
               <p data-scroll>${data.about.content}</p>
               `)}
-            </p>
             <span className='mark'>■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ </span> {" "}
             
           </div>
