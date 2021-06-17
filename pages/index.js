@@ -34,129 +34,111 @@ export default function IndexPage() {
         <Grid>
           {/* ABOUT */}
           <div>
-            <Title>{data.about.title}</Title>
-
+            <Title as="h2">{data.about.title}</Title>
             <p data-scroll>
               {parse(`
               <p data-scroll>${data.about.content}</p>
               `)}
             </p>
+            <span className="mark">
+              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+              ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            </span>
           </div>
-
           {/* CLIENTS */}
           <div>
-            <Title>{data.clients.title}</Title>
-            <List join>
+            <Title as="h2">{data.clients.title}</Title>
+            <ul>
               {data.clients.content.map((item, key) => (
                 <li data-scroll key={key}>
                   {item}
+                  {" / "}
                 </li>
               ))}
-            </List>
+            </ul>
+
+            <span className="mark">
+              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+              ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            </span>
           </div>
 
-          <div
-            style={{
-              gridColumn: `3 / 5`,
-            }}
-          >
-            <Grid col={2}>
-              {/* PRESS */}
-              <div>
-                <Title>{data.press.title}</Title>
-                {data.press.content.map(({ link, name, label, date }, key) => (
+          <div>
+            {/* PRESS */}
+            <Title as="h2">{data.press.title}</Title>
+            <ul>
+              {data.press.content.map(({ link, name, label, date }, key) => (
+                <li data-scroll key={key}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    {name}, {label} {date} {" / "}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <span className="mark">
+              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+              ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+            </span>
+
+            {/* PUBLICATIONS */}
+            <Title as="h2">{data.publications.title}</Title>
+            <ul>
+              {data.publications.content.map(
+                ({ link, name, label, date }, key) => (
                   <li data-scroll key={key}>
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                      {name}
-                      <br />
-                      {label}
-                      {label ? <br /> : null}
-
-                      {date}
+                      {name}, {label} {date} {" / "}
                     </a>
                   </li>
-                ))}
-              </div>
-
-              {/* PUBLICATIONS */}
-              <div>
-                <Title>{data.publications.title}</Title>
-                {data.publications.content.map(
-                  ({ link, name, label, date }, key) => (
-                    <li data-scroll key={key}>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
-                        {name}
-                        <br />
-                        {label}
-                        {label ? <br /> : null}
-
-                        {date}
-                      </a>
-                    </li>
-                  )
-                )}
-              </div>
-
-              {/* PHOTO */}
-              <Photo />
-            </Grid>
+                )
+              )}
+            </ul>
+            <br />
+            <Photo />
           </div>
 
           {/* SIDE PROJECTS */}
           <div>
-            <Title>{data.side.title}</Title>
-            {data.side.content.map(({ link, name, type, date }, key) => (
-              <li data-scroll key={key}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  <b>{name}</b>
-                  <br />
-                  {type}
-                  <br />
-                  {date}
-                </a>
-              </li>
-            ))}
+            <Title as="h2">{data.side.title}</Title>
+            <ul>
+              {data.side.content.map(({ link, name, type, date }, key) => (
+                <li data-scroll key={key}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    {name}, {type} <Title as="span">{date}</Title> {" / "}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* EXPERIENCE */}
           <div>
-            <Title>{data.experience.title}</Title>
-            {data.experience.content.map(
-              ({ name, label, date, location }, key) => (
-                <li data-scroll key={key}>
-                  {name}
-                  <br />
-                  {label}
-                  <br />
-                  {date}
-                  <br />
-                  {location}
-                </li>
-              )
-            )}
+            <Title as="h2">{data.experience.title}</Title>
+            <ul>
+              {data.experience.content.map(
+                ({ name, label, date, location }, key) => (
+                  <li data-scroll key={key}>
+                    {name}, {label}, {location} <Title as="span">{date}</Title>
+                    {" / "}
+                  </li>
+                )
+              )}
+            </ul>
           </div>
-        </Grid>
 
-        <div className="space" />
-
-        <Grid>
           {/* AWARDS */}
-
-          <div className={styles.ListInline}>
-            <Title>{data.awards.title}</Title>
-            <ListInline>
+          <div>
+            <Title as="h2">{data.awards.title}</Title>
+            <ul>
               {data.awards.content.map(({ link, name, label, date }, key) => (
                 <li data-scroll key={key}>
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    {name}
-                    <br />
-                    {label}
-                    <br />
-                    {date}
+                    {name}, {label} <Title as="span">{date}</Title> {" / "}
                   </a>
                 </li>
               ))}
-            </ListInline>
+            </ul>
           </div>
         </Grid>
 
