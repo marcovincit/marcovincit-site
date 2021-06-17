@@ -34,33 +34,27 @@ export default function IndexPage() {
         <Grid>
           {/* ABOUT */}
           <div>
-            <Title as="h2">{data.about.title}</Title>
+            <Title as="h2">{data.about.title} {" "} <span className='mark'>■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ </span> {" "} </Title>
             <p data-scroll>
               {parse(`
               <p data-scroll>${data.about.content}</p>
               `)}
             </p>
-            <span className="mark">
-              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-              ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-            </span>
+            <span className='mark'>■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ </span> {" "}
+            
           </div>
           {/* CLIENTS */}
           <div>
-            <Title as="h2">{data.clients.title}</Title>
+            <Title as="h2">{data.clients.title} {" "} <span className='mark'>■ ■ ■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ </span> {" "}</Title>
             <ul>
               {data.clients.content.map((item, key) => (
                 <li data-scroll key={key}>
-                  {item}
-                  {" / "}
+                  {item}{" "} <span className='mark'>■■■</span> {" "}
                 </li>
               ))}
             </ul>
 
-            <span className="mark">
-              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-              ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-            </span>
+           
           </div>
 
           <div>
@@ -70,16 +64,13 @@ export default function IndexPage() {
               {data.press.content.map(({ link, name, label, date }, key) => (
                 <li data-scroll key={key}>
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    {name}, {label} {date} {" / "}
+                    {name}, {label} {date}{" "} <span className='mark'>■■■</span> {" "}
                   </a>
                 </li>
               ))}
             </ul>
 
-            <span className="mark">
-              ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-              ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-            </span>
+     
 
             {/* PUBLICATIONS */}
             <Title as="h2">{data.publications.title}</Title>
@@ -88,7 +79,7 @@ export default function IndexPage() {
                 ({ link, name, label, date }, key) => (
                   <li data-scroll key={key}>
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                      {name}, {label} {date} {" / "}
+                      {name}, {label} {date}{" "} <span className='mark'>■■■</span> {" "}
                     </a>
                   </li>
                 )
@@ -105,7 +96,7 @@ export default function IndexPage() {
               {data.side.content.map(({ link, name, type, date }, key) => (
                 <li data-scroll key={key}>
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    {name}, {type} <Title as="span">{date}</Title> {" / "}
+                    {name}, {type} <Title as="span">{date}</Title>{" "} <span className='mark'>■■■</span> {" "}
                   </a>
                 </li>
               ))}
@@ -120,7 +111,7 @@ export default function IndexPage() {
                 ({ name, label, date, location }, key) => (
                   <li data-scroll key={key}>
                     {name}, {label}, {location} <Title as="span">{date}</Title>
-                    {" / "}
+                   {" "} <span className='mark'>■■■</span> {" "}
                   </li>
                 )
               )}
@@ -134,7 +125,7 @@ export default function IndexPage() {
               {data.awards.content.map(({ link, name, label, date }, key) => (
                 <li data-scroll key={key}>
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    {name}, {label} <Title as="span">{date}</Title> {" / "}
+                    {name}, {label} <Title as="span">{date}</Title>{" "} <span className='mark'>■■■</span> {" "}
                   </a>
                 </li>
               ))}

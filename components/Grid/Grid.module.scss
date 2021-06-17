@@ -4,6 +4,8 @@
   width: 100%;
   display: grid;
 
+  align-items: stretch;
+
   gap: 5rem 5rem;
   grid-template-columns: repeat(1, 1fr);
 
