@@ -1,6 +1,11 @@
 @import url("https://use.typekit.net/dkl1ast.css");
 // @import url("./breakpoints.scss");
 
+::selection {
+  color: inherit !important;
+  background: transparent !important;
+}
+
 html,
 body {
   padding: 0;
@@ -17,12 +22,16 @@ html {
 }
 
 body {
+  // colors
   background-color: var(--text-color);
   color: var(--background-color);
   @media (prefers-color-scheme: dark) {
     background-color: var(--background-color);
     color: var(--text-color);
   }
+
+  //
+  overflow: hidden;
 }
 
 a {

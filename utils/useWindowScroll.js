@@ -1,10 +1,10 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function useWindowScroll() {
   const [windowScrollX, setWindowScrollX] = useState(0);
   const [windowScrollY, setWindowScrollY] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateWindowScroll() {
       setWindowScrollX(window.scrollX);
       setWindowScrollY(window.scrollY);

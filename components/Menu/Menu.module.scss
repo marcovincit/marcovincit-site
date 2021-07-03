@@ -12,13 +12,32 @@
 
   ul {
     display: inline-block;
-  }
 
-  a {
-    font-size: 20.4rem;
-    line-height: 90%;
-    font-weight: 200;
-    letter-spacing: -0.05em;
-    margin-left: -0.085em;
+    li {
+      display: block;
+
+      a {
+        display: block;
+        font-size: 20.4rem;
+        line-height: 90%;
+        font-weight: 200;
+        letter-spacing: -0.05em;
+        margin-left: -0.085em;
+
+        span {
+          pointer-events: none;
+        }
+      }
+    }
+
+    &:hover {
+      li {
+        opacity: 0.1;
+        transition: opacity 150ms;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 }

@@ -1,10 +1,10 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function useCursorPosition() {
   const [cursorPositionX, setCursorPositionX] = useState(0);
   const [cursorPositionY, setCursorPositionY] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateCursorPosition(e) {
       setCursorPositionX(e ? e.clientX : null);
       setCursorPositionY(e ? e.clientY : null);
