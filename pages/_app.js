@@ -22,12 +22,7 @@ function MyApp({ Component, pageProps }) {
     );
   }, [color, background]);
 
-  return (
-    <>
-      {color}
-      <Component {...pageProps} />
-    </>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
