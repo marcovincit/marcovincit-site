@@ -13,6 +13,7 @@ export default function Footer() {
       </a>
       <div className={styles.content}>
         <a
+          className="hide-xs"
           target="_blank"
           rel="noreferrer"
           href="https://en.wikipedia.org/wiki/Jan_Tschichold"

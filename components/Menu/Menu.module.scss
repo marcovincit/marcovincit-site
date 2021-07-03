@@ -1,7 +1,15 @@
 @import "styles/breakpoints.scss";
 
 .menu {
-  padding: 25rem 5rem;
+  padding: 10rem 2rem;
+
+  @include for-size(md) {
+    padding: 15rem 3rem;
+  }
+
+  @include for-size(lg) {
+    padding: 25rem 5rem;
+  }
 
   ul,
   li {
@@ -18,11 +26,22 @@
 
       a {
         display: block;
-        font-size: 20.4rem;
-        line-height: 90%;
+
+        font-size: 6.4rem;
+        line-height: 100%;
         font-weight: 200;
         letter-spacing: -0.05em;
         margin-left: -0.09em;
+
+        @include for-size(md) {
+          font-size: 9.6rem;
+          line-height: 90%;
+        }
+
+        @include for-size(lg) {
+          font-size: 14.4rem;
+          line-height: 90%;
+        }
 
         span {
           pointer-events: none;

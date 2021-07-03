@@ -19,7 +19,7 @@ export default function Header() {
             Design & Development
           </a>
         </h2>
-        <h3>
+        <h3 className="hide-xs">
           <a
             target="_blank"
             rel="noreferrer"

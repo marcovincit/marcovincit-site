@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
+import useDeviceOrientation from "utils/useDeviceOrientation";
+import modulate from "utils/modulate";
+
 import Menu from "components/Menu";
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -18,17 +21,27 @@ function MyApp({ Component, pageProps }) {
     slug ? " | " + slug.charAt(0).toUpperCase() + slug.slice(1) : ""
   }`;
 
+  // useDeviceOrientation
+  const { alpha, beta, gamma } = useDeviceOrientation();
+
   // colors
   const [background, setBackground] = useState(0);
   const [color, setColor] = useState(0);
 
-  const min = 1;
+  const min = 0;
   const max = 360;
 
   useEffect(() => {
     setBackground(Math.round(min + Math.random() * (max - min)));
     setColor(Math.round(min + Math.random() * (max - min)));
   }, []);
+
+  useEffect(() => {
+    const newBackground = modulate(beta, [0, 90], [min, max], true);
+    const newColor = modulate(alpha, [0, 360], [min, max], true);
+    setBackground(Math.round(newBackground));
+    setColor(Math.round(newColor));
+  }, [beta]);
 
   useEffect(() => {
     const root = document.querySelector(":root");

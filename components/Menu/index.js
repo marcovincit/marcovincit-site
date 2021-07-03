@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import useWindowSize from "utils/useWindowSize";
+
 import useCursorPosition from "utils/useCursorPosition";
 import modulate from "utils/modulate";
 
@@ -15,6 +16,7 @@ export default function Menu() {
   const [menuHeight, setMenuHeight] = useState(0);
 
   const { windowWidth, windowHeight } = useWindowSize();
+
   const { cursorPositionY } = useCursorPosition();
 
   const [menuY, setMenuY] = useState(0);
@@ -28,14 +30,16 @@ export default function Menu() {
 
   useEffect(() => {
     setMenuY(
-      `-${modulate(
-        cursorPositionY,
-        [menuTop, windowHeight],
-        [0, menuTop + menuHeight - windowHeight],
-        true
-      )}px`
+      windowWidth > 1100
+        ? `-${modulate(
+            cursorPositionY,
+            [menuTop, windowHeight],
+            [0, menuTop + menuHeight - windowHeight],
+            true
+          )}px`
+        : 0
     );
-  }, [cursorPositionY]);
+  }, [cursorPositionY, windowWidth, windowHeight]);
 
   return (
     <motion.menu

@@ -6,8 +6,8 @@ export default function useCursorPosition() {
 
   useEffect(() => {
     function updateCursorPosition(e) {
-      setCursorPositionX(e ? e.clientX : null);
-      setCursorPositionY(e ? e.clientY : null);
+      setCursorPositionX(e !== undefined ? e.clientX : 0);
+      setCursorPositionY(e !== undefined ? e.clientY : 0);
     }
 
     window.addEventListener("mousemove", updateCursorPosition);

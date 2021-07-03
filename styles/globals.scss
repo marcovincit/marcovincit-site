@@ -29,15 +29,14 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
   }
-
-  //
-  overflow: hidden;
 }
 
 #__next {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  @include for-size(lg) {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 a {
@@ -55,8 +54,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  @include for-size(lg) {
+    font-size: 1.8rem;
+  }
   font-weight: 300;
   margin: 0;
   padding: 0;
+}
+
+.hide-xs {
+  @include for-size(xs) {
+    display: none;
+  }
+  @include for-size(sm) {
+    display: inherit;
+  }
 }
