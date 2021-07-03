@@ -11,13 +11,18 @@ export default function Header() {
       </h1>
       <div className={styles.content}>
         <h2>
-          <a target="_blank" href="https://www.google.com/search?q=design">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.google.com/search?q=design"
+          >
             Design & Development
           </a>
         </h2>
         <h3>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.google.com/search?q=S%C3%A3o+Paulo%2C+SP"
           >
             São Paulo, Brazil

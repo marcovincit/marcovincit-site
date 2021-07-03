@@ -1,5 +1,5 @@
 import styles from "./Menu.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
