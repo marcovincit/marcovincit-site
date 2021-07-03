@@ -1,23 +1,33 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [background, setBackground] = useState(0);
   const [color, setColor] = useState(0);
 
+  const min = 1;
+  const max = 360;
+
   useEffect(() => {
-    const min = 1;
-    const max = 360;
-
-    setBackground(min + Math.random() * (max - min));
-    setColor(min + Math.random() * (max - min));
-
-    const doc = document.documentElement;
-    doc.style.setProperty("--text-color", `hsl(${color}, 30%, 70%)`);
-    doc.style.setProperty("--background-color", `hsl(${background}, 50%, 10%)`);
+    setBackground(Math.round(min + Math.random() * (max - min)));
+    setColor(Math.round(min + Math.random() * (max - min)));
   }, []);
 
-  return <Component {...pageProps} />;
+  useEffect(() => {
+    const root = document.querySelector(":root");
+    root.style.setProperty("--text-color", `hsl(${color}, 30%, 70%)`);
+    root.style.setProperty(
+      "--background-color",
+      `hsl(${background}, 50%, 10%)`
+    );
+  }, [color, background]);
+
+  return (
+    <>
+      {color}
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
