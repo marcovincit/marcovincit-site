@@ -1,5 +1,5 @@
 @import url("https://use.typekit.net/dkl1ast.css");
-// @import url("./breakpoints.scss");
+@import "./breakpoints.scss";
 
 ::selection {
   color: inherit !important;
@@ -16,9 +16,9 @@ body {
 html {
   font-size: 10px;
 
-  // @include for-size(lg) {
-  //   font-size: calc(100vh / 1080 * 10);
-  // }
+  @include for-size(lg) {
+    font-size: calc(100vh / 1080 * 10);
+  }
 }
 
 body {
