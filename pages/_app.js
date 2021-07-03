@@ -22,7 +22,9 @@ function MyApp({ Component, pageProps }) {
   }`;
 
   // useDeviceOrientation
-  const { alpha, beta, gamma } = useDeviceOrientation();
+  const { absolute, alpha, beta, gamma } = useDeviceOrientation();
+
+  console.log(absolute);
 
   // colors
   const [background, setBackground] = useState(0);
@@ -37,18 +39,20 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
-    const newBackground = modulate(gamma, [-90, 90], [min, max], true);
-    const newColor = modulate(gamma, [-90, 90], [max, min], true);
-    setBackground(Math.round(newBackground));
-    setColor(Math.round(newColor));
+    if (absolute !== 0) {
+      const newBackground = modulate(gamma, [-90, 90], [min, max], true);
+      const newColor = modulate(gamma, [-90, 90], [max, min], true);
+      setBackground(Math.round(newBackground));
+      setColor(Math.round(newColor));
+    }
   }, [beta]);
 
   useEffect(() => {
     const root = document.querySelector(":root");
-    root.style.setProperty("--text-color", `hsl(${color}, 30%, 70%)`);
+    root.style.setProperty("--text-color", `hsl(${color}, 60%, 70%)`);
     root.style.setProperty(
       "--background-color",
-      `hsl(${background}, 50%, 10%)`
+      `hsl(${background}, 40%, 10%)`
     );
   }, [color, background]);
 
