@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
-    const newBackground = modulate(beta, [0, 90], [min, max], true);
+    const newBackground = modulate(gamma, [0, 90], [min, max], true);
     const newColor = modulate(alpha, [0, 360], [min, max], true);
     setBackground(Math.round(newBackground));
     setColor(Math.round(newColor));
