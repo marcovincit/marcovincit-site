@@ -1,0 +1,24 @@
+@import "styles/breakpoints.scss";
+
+.menu {
+  padding: 25rem 5rem;
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: inline-block;
+  }
+
+  a {
+    font-size: 20.4rem;
+    line-height: 90%;
+    font-weight: 200;
+    letter-spacing: -0.05em;
+    margin-left: -0.085em;
+  }
+}
