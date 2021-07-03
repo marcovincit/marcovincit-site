@@ -1,0 +1,31 @@
+@import "styles/breakpoints.scss";
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.8rem;
+  font-weight: 300;
+
+  padding: 5rem;
+
+  > * {
+    width: 100%;
+  }
+
+  a:hover {
+    text-decoration: line-through;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}

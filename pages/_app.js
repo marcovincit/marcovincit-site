@@ -5,6 +5,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import Menu from "components/Menu";
+import Header from "components/Header";
+import Footer from "components/Footer";
 
 function MyApp({ Component, pageProps }) {
   // router
@@ -46,8 +48,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Brazilian Designer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <Menu />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </>
   );
 }
