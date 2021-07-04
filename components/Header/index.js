@@ -17,9 +17,7 @@ export default function Header() {
   return (
     <header className={styles.container}>
       <h1>
-        <a href="/" onClick={handleClick}>
-          Marco Vincit
-        </a>
+        <a onClick={handleClick}>Marco Vincit</a>
       </h1>
       <div className={styles.content}>
         <h2>
