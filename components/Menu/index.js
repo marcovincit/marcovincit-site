@@ -10,6 +10,43 @@ import useWindowSize from "utils/useWindowSize";
 import useCursorPosition from "utils/useCursorPosition";
 import modulate from "utils/modulate";
 
+import { useSite } from "context";
+
+function ActiveLink({ children, href }) {
+  const router = useRouter();
+  const slug = href.slice(1);
+
+  const [number, setNumber] = useState(300);
+
+  const style = {
+    marginRight: 10,
+    pointerEvents: router.asPath === href ? "none" : "inherit",
+  };
+
+  const { pageState, setPageState, pageZIndex, setPageZIndex } = useSite();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(href);
+
+    setNumber(number + 1);
+
+    setPageState({ ...pageState, [slug]: true });
+  };
+
+  useEffect(() => {
+    setPageZIndex({ ...pageZIndex, [slug]: number });
+  }, [number]);
+
+  return (
+    <li>
+      <a href={href} onClick={handleClick}>
+        {children}
+      </a>
+    </li>
+  );
+}
+
 export default function Menu() {
   // router
   const router = useRouter();
@@ -55,55 +92,33 @@ export default function Menu() {
       transition={{ ease: "easeOut", duration: 0.6 }}
     >
       <ul>
-        <li>
-          <Link href="/about">
-            <a>
-              <span>About</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/experience">
-            <a>
-              <span>Experience</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/press">
-            <a>
-              <span>Press</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/publications">
-            <a>
-              <span>Publications</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/projects">
-            <a>
-              <span>Side projects</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/clients">
-            <a>
-              <span>Clients</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/featured">
-            <a>
-              <span>Featured</span>
-            </a>
-          </Link>
-        </li>
+        <ActiveLink href="/about">
+          <span>About</span>
+        </ActiveLink>
+
+        <ActiveLink href="/experience">
+          <span>Experience</span>
+        </ActiveLink>
+
+        <ActiveLink href="/press">
+          <span>Press</span>
+        </ActiveLink>
+
+        <ActiveLink href="/publications">
+          <span>Publications</span>
+        </ActiveLink>
+
+        <ActiveLink href="/projects">
+          <span>Side projects</span>
+        </ActiveLink>
+
+        <ActiveLink href="/clients">
+          <span>Clients</span>
+        </ActiveLink>
+
+        <ActiveLink href="/featured">
+          <span>Featured</span>
+        </ActiveLink>
       </ul>
     </motion.menu>
   );

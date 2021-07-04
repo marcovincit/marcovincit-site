@@ -48,10 +48,10 @@
           line-height: 90%;
         }
 
-        @include for-size(xl) {
-          font-size: 20rem;
-          line-height: 90%;
-        }
+        // @include for-size(xl) {
+        //   font-size: 20rem;
+        //   line-height: 90%;
+        // }
 
         span {
           pointer-events: none;

@@ -8,7 +8,6 @@ import parse from "html-react-parser";
 import Page from "components/Page";
 
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import useDeviceOrientation from "utils/useDeviceOrientation";
 import modulate from "utils/modulate";
@@ -17,32 +16,18 @@ import Menu from "components/Menu";
 import Header from "components/Header";
 import Footer from "components/Footer";
 
-function MyApp({ Component, pageProps }) {
-  // router
-  const router = useRouter();
-  const { slug } = router.query;
+import SiteProvider, { useSite } from "context";
 
-  // setPages
-  const [active, setActive] = useState({});
+function Site() {
+  const { pageState, setPageState, pageTitle, pageZIndex } = useSite();
 
-  useEffect(() => {
-    if (slug) {
-      setActive({ ...active, [slug]: true });
-    } else {
-      setActive({});
-    }
-  }, [slug]);
+  let layerNumber = 300;
 
   // close
 
   const close = (name) => {
-    setActive({ ...active, [name]: false });
+    setPageState({ ...pageState, [name]: false });
   };
-
-  // page info
-  const title = `Marco Vincit${
-    slug ? " | " + slug.charAt(0).toUpperCase() + slug.slice(1) : ""
-  }`;
 
   // useDeviceOrientation
   const { absolute, alpha, beta, gamma } = useDeviceOrientation();
@@ -79,7 +64,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content="Brazilian Designer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -87,7 +72,7 @@ function MyApp({ Component, pageProps }) {
       <Menu />
       <main className={styles.container}>
         {/* AWARDS */}
-        <Page size={93} active={active.featured}>
+        <Page size={93} active={pageState.featured} zIndex={layerNumber}>
           <section>
             <h3>{data.awards.title}</h3>
             <ul className={styles.col}>
@@ -122,7 +107,12 @@ function MyApp({ Component, pageProps }) {
         </Page>
 
         {/* SIDE PROJECTS */}
-        <Page size={79} onePage active={active.projects}>
+        <Page
+          size={79}
+          onePage
+          active={pageState.projects}
+          zIndex={pageZIndex.projects}
+        >
           <section>
             <h3>{data.side.title}</h3>
             <ul>
@@ -140,7 +130,7 @@ function MyApp({ Component, pageProps }) {
         </Page>
 
         {/* ABOUT */}
-        <Page size={65} active={active.about}>
+        <Page size={65} active={pageState.about} zIndex={pageZIndex.about}>
           <section>
             <h3>{data.about.title}</h3>
             {data.about.content.map((paragraph, key) => (
@@ -155,7 +145,12 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.close} onClick={() => close("about")} />
         </Page>
 
-        <Page size={76} onePage active={active.press}>
+        <Page
+          size={76}
+          onePage
+          active={pageState.press}
+          zIndex={pageZIndex.press}
+        >
           {/* PRESS */}
           <section>
             <h3>{data.press.title}</h3>
@@ -179,7 +174,12 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.close} onClick={() => close("press")} />
         </Page>
 
-        <Page size={50} onePage active={active.publications}>
+        <Page
+          size={50}
+          onePage
+          active={pageState.publications}
+          zIndex={pageZIndex.publications}
+        >
           {/* PUBLICATIONS */}
           <section>
             <h3>{data.publications.title}</h3>
@@ -204,7 +204,12 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.close} onClick={() => close("publications")} />
         </Page>
 
-        <Page size={70} onePage active={active.clients}>
+        <Page
+          size={70}
+          onePage
+          active={pageState.clients}
+          zIndex={pageZIndex.clients}
+        >
           {/* CLIENTS */}
           <section>
             <h3>{data.clients.title}</h3>
@@ -221,7 +226,12 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.close} onClick={() => close("clients")} />
         </Page>
 
-        <Page size={66} onePage active={active.experience}>
+        <Page
+          size={66}
+          onePage
+          active={pageState.experience}
+          zIndex={pageZIndex.experience}
+        >
           {/* EXPERIENCE */}
           <section>
             <h3>{data.experience.title}</h3>
@@ -246,11 +256,16 @@ function MyApp({ Component, pageProps }) {
           <div className={styles.close} onClick={() => close("experience")} />
         </Page>
       </main>
-      <Component {...pageProps} />
 
       <Footer />
     </>
   );
 }
 
-export default MyApp;
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <SiteProvider>
+      <Site />
+    </SiteProvider>
+  );
+}
