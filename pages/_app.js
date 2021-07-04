@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import styles from "../styles/Pages.module.scss";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 import data from "data/about";
 import parse from "html-react-parser";
@@ -138,8 +139,12 @@ function Site() {
             ))}
           </section>
           <section className={styles.aboutImageContainer}>
-            <img className={styles.aboutImage1} src="/about.jpg" />
-            <img className={styles.aboutImage2} src="/about.jpg" />
+            <Image
+              width={600}
+              height={900}
+              className={styles.aboutImage}
+              src="/about.jpg"
+            />
           </section>
 
           <div className={styles.close} onClick={() => close("about")} />

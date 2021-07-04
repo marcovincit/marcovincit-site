@@ -14,19 +14,10 @@
   position: relative;
 }
 
-.aboutImage1 {
+.aboutImage {
   opacity: 1;
   width: 100%;
-  mix-blend-mode: soft-light;
-}
-
-.aboutImage2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  opacity: 0.8;
-  width: 100%;
+  mix-blend-mode: luminosity;
 }
 
 .col,
