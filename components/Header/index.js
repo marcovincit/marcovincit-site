@@ -1,13 +1,25 @@
 import styles from "./Header.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useSite } from "context";
 
 export default function Header() {
+  const { setPageState } = useSite();
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/");
+
+    setPageState({});
+  };
+
   return (
     <header className={styles.container}>
       <h1>
-        <Link href="/">
-          <a>Marco Vincit</a>
-        </Link>
+        <a href="/" onClick={handleClick}>
+          Marco Vincit
+        </a>
       </h1>
       <div className={styles.content}>
         <h2>
