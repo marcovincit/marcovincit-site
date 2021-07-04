@@ -33,6 +33,11 @@
         letter-spacing: -0.05em;
         margin-left: -0.09em;
 
+        // transition: font-size 1s cubic-bezier(0.645, 0.045, 0.355, 1),
+        //   line-height 1s cubic-bezier(0.645, 0.045, 0.355, 1),
+        //   letter-spacing 1s cubic-bezier(0.645, 0.045, 0.355, 1),
+        //   margin-left 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
         @include for-size(md) {
           font-size: 9.6rem;
           line-height: 90%;
@@ -40,6 +45,11 @@
 
         @include for-size(lg) {
           font-size: 14.4rem;
+          line-height: 90%;
+        }
+
+        @include for-size(xl) {
+          font-size: 20rem;
           line-height: 90%;
         }
 
@@ -60,3 +70,17 @@
     }
   }
 }
+
+// .menuMin {
+//   ul {
+//     li {
+//       a {
+//         font-size: 7.2rem;
+//         letter-spacing: -0.025em;
+//         line-height: 120%;
+//         margin-left: 0em;
+//         transform: translate(0) !important;
+//       }
+//     }
+//   }
+// }

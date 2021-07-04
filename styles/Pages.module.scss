@@ -1,0 +1,41 @@
+.close {
+  width: 10rem;
+  height: 10rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  cursor: se-resize;
+}
+
+.aboutImageContainer {
+  // background: var(--background-color);
+  position: relative;
+}
+
+.aboutImage1 {
+  opacity: 1;
+  width: 100%;
+  mix-blend-mode: soft-light;
+}
+
+.aboutImage2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0.8;
+  width: 100%;
+}
+
+.col,
+.simpleList {
+  column-count: 2;
+}
+
+.simpleList {
+  li {
+    margin-bottom: 0.5rem !important;
+  }
+}

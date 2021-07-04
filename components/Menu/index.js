@@ -1,6 +1,7 @@
 import styles from "./Menu.module.scss";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { motion } from "framer-motion";
 
@@ -10,6 +11,11 @@ import useCursorPosition from "utils/useCursorPosition";
 import modulate from "utils/modulate";
 
 export default function Menu() {
+  // router
+  const router = useRouter();
+  const { slug } = router.query;
+
+  //
   const menu = useRef(null);
 
   const [menuTop, setMenuTop] = useState(0);
@@ -44,7 +50,7 @@ export default function Menu() {
   return (
     <motion.menu
       ref={menu}
-      className={styles.menu}
+      className={`${styles.menu} ${slug ? styles.menuMin : ""} `}
       animate={{ y: menuY }}
       transition={{ ease: "easeOut", duration: 0.6 }}
     >
@@ -78,7 +84,7 @@ export default function Menu() {
           </Link>
         </li>
         <li>
-          <Link href="/side-projects">
+          <Link href="/projects">
             <a>
               <span>Side projects</span>
             </a>
