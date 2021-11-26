@@ -132,7 +132,7 @@ function Site() {
 
         {/* ABOUT */}
         <Page size={65} active={pageState.about} zIndex={pageZIndex.about}>
-          <section>
+          <section className='section-scrollable'>
             <h3>{data.about.title}</h3>
             {data.about.content.map((paragraph, key) => (
               <p key={key}>{parse(paragraph)}</p>
@@ -157,22 +157,24 @@ function Site() {
           zIndex={pageZIndex.press}
         >
           {/* PRESS */}
-          <section>
+          <section className='section-scrollable'>
             <h3>{data.press.title}</h3>
             <ul>
-              {data.press.content.map(
-                ({ link, name, label, author, date }, key) => (
-                  <li key={key}>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      {name}
-                      <br />
-                      {label} {author}
-                      <br />
-                      <i>{date}</i>
-                    </a>
-                  </li>
-                )
-              )}
+ {data.press.content.map(
+              ({ link, name, label, author, date }, key) => (
+                <li key={key}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    {name}
+                    <br />
+                    {label ? parse(`${label}`) : ""}
+                    {label ? <br /> : ""}
+                    {author}
+                    {author ? <br /> : ""}
+                    <i>{date}</i>
+                  </a>
+                </li>
+              )
+            )}
             </ul>
           </section>
 
@@ -186,7 +188,7 @@ function Site() {
           zIndex={pageZIndex.publications}
         >
           {/* PUBLICATIONS */}
-          <section>
+          <section className='section-scrollable'>
             <h3>{data.publications.title}</h3>
             <ul>
               {data.publications.content.map(
@@ -210,7 +212,7 @@ function Site() {
         </Page>
 
         <Page
-          size={70}
+          size={80}
           onePage
           active={pageState.clients}
           zIndex={pageZIndex.clients}
@@ -238,7 +240,7 @@ function Site() {
           zIndex={pageZIndex.experience}
         >
           {/* EXPERIENCE */}
-          <section>
+          <section className='section-scrollable'>
             <h3>{data.experience.title}</h3>
             <ul>
               {data.experience.content.map(

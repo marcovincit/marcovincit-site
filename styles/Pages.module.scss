@@ -7,6 +7,16 @@
   left: 0;
 
   cursor: se-resize;
+
+  @media only screen and (max-width: 1068px) {
+    width: 100%;
+    display: flex;
+    &::before {
+      content: "↘";
+      font-size: 3.2rem;
+      padding: 2rem;
+    }
+  }
 }
 
 .aboutImageContainer {
