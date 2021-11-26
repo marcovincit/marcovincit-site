@@ -72,8 +72,9 @@ function Site() {
       <Header />
       <Menu />
       <main className={styles.container}>
-        {/* AWARDS */}
         <Page size={93} active={pageState.featured} zIndex={layerNumber}>
+          {/* AWARDS */}
+
           <section>
             <h3>{data.awards.title}</h3>
             <ul className={styles.col}>
@@ -107,13 +108,13 @@ function Site() {
           <div className={styles.close} onClick={() => close("featured")} />
         </Page>
 
-        {/* SIDE PROJECTS */}
         <Page
           size={79}
           onePage
           active={pageState.projects}
           zIndex={pageZIndex.projects}
         >
+          {/* SIDE PROJECTS */}
           <section>
             <h3>{data.side.title}</h3>
             <ul>
