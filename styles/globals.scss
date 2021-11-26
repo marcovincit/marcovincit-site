@@ -1,6 +1,14 @@
 @import url("https://use.typekit.net/dkl1ast.css");
 @import "./breakpoints.scss";
 
+@font-face {
+  font-family: "Editorial New";
+  src: url("/editorialnew-variable-webfont.woff2") format("woff2"),
+    url("/editorialnew-variable-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 ::selection {
   color: inherit !important;
   background: transparent !important;
