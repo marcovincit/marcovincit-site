@@ -444,7 +444,7 @@ export default {
       {
         link: "https://goo.gl/fkziBY",
         name: "CSS Awards",
-        label: "Site of the Day",
+        label: "Site of the Day ",
         date: "6 may 2016",
       },
       {
