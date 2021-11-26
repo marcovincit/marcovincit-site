@@ -130,3 +130,35 @@
     }
   }
 }
+
+//
+
+@media only screen and (max-width: 1068px) {
+  .container {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10rem;
+    gap: 6rem;
+
+    &::before {
+      display: none;
+    }
+
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .container {
+    padding: 6rem;
+  }
+}

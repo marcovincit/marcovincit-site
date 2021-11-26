@@ -2,10 +2,12 @@ export default {
   about: {
     title: "About",
     content: [
-      "Hello, I'm a Brazilian designer and web developer.",
-      "I'm from Brumadinho (Minas Ge-rais), where <a href='https://www.inhotim.org.br/' target='_blank' rel='noopener noreferrer'>Inhotim</a> is located, one of the most important collections of contemporary art and the largest open air museum in the world.",
-      "I love graphic design, modernist and contemporany art and always try to bring those references to the digital experience.",
-      "I have worked with important brands, such as Amazon, Havaia-nas, Petrobras, Vivo, Globo, Gold-man Sachs, Santander, Cartão Elo, Algar Telecom, Iveco, Usiminas, amo-ng others.",
+      `I was born and raised in <a href="https://en.wikipedia.org/wiki/Brumadinho" target="_blank" rel="noopener noreferrer">Brumadinho</a>, <a href="https://en.wikipedia.org/wiki/Minas_Gerais" target="_blank" rel="noopener noreferrer">Minas Gerais</a>, and my design inspirations came from my small town. There has beautiful mountains, sunsets, mist, and <a href="https://en.wikipedia.org/wiki/Inhotim" target="_blank" rel="noopener noreferrer">Inhotim Institute</a>, a mix of park and museum. <a href="https://en.wikipedia.org/wiki/Inhotim" target="_blank" rel="noopener noreferrer">Inhotim</a> is one of the most important collections of contemporary art and the largest outdoor art center in Latin America.`,
+      "When I was a child, I spent a lot of time discovering how fantastic a computer is and creating some aleatory things on Microsoft Paint.",
+      `Currently I live in <a href="https://www.google.com/search?q=S%C3%A3o+Paulo%2C+SP" target="_blank" rel="noopener noreferrer">São Paulo</a>, a city that always surprises me, with good food, art and music.`,
+      "I love graphic design, modernism, and contemporary art. One of the most important things that I need to do is give more meaning to brands, creating a simple design to solve real problems for real people.",
+      "I always try to bring art and graphic design references to the digital universe with smooth interactions, creating an immersive experience.",
+      "I've worked with important brands, such as Amazon, Vivo, Havaianas, Petrobras, Globo, Goldman Sachs, Santander, Cartão Elo, Iveco, Usiminas, among others.",
     ],
   },
 
@@ -20,11 +22,11 @@ export default {
       "Babylon Beach Bar",
       // "Camarím Fit",
       "Cartão Elo",
-      // "CNI",
+      "CNI",
       "Costa do Sauípe",
       "Descomplica",
       "Direcional Engenharia",
-      // "El Portalon",
+      "El Portalon Ibiza",
       "Estudio Atmosfera",
       "Facebook",
       // "Faven",
@@ -33,10 +35,12 @@ export default {
       "Globo",
       "Gol Linhas Aéreas",
       "Goldman Sachs",
+      "Google",
       "Governo de Minas Gerais",
       "Havaianas",
       "Icatu Seguros",
       "IESB Centro Universitário",
+      "IHG Hotels & Resorts",
       // "Instituto Pedro Arthur",
       "Iveco Brazil",
       "Mineirão",
@@ -46,12 +50,14 @@ export default {
       // "Rafael Maia",
       "Sistema FIEMG",
       "Seculus Relógios",
-      // "Stirling Ackroyd",
+      "Stirling Ackroyd",
       "Teatro SESI Minas",
+      "TechCrunch",
       "TEDx Mariana",
-      // "Tim Hortons",
+      "Tim Hortons",
       "Usiminas",
-      "Vivo Easy",
+      "Virgin America",
+      "Vivo",
     ],
   },
 
@@ -81,6 +87,7 @@ export default {
         name: "Colorful Chords",
         type: "App",
         date: "Soon",
+        link: "https://dribbble.com/marcovincit/projects/2969318-Colorful-Chords",
       },
 
       {
@@ -126,6 +133,7 @@ export default {
         name: "Vincit Beer",
         type: "Package",
         date: "2015",
+        link: "https://www.behance.net/gallery/34013290/Vincit-Beer-Special-Limited-Edition",
       },
     ],
   },
@@ -135,8 +143,16 @@ export default {
     title: "Experience",
     content: [
       {
+        date: "Jul 2021 – Present",
+        name: "CodeSandbox",
+        label: "Senior Designer",
+        location: "Sao Paulo, Brazil",
+        link: "#",
+      },
+
+      {
         date: "Mar 2020 – Jun 2021",
-        name: "Rebel",
+        name: "Open Co",
         label: "Head of Design",
         location: "Sao Paulo, Brazil",
         link: "#",
@@ -183,19 +199,19 @@ export default {
       {
         name: "Sandu Publishing",
         link: "https://goo.gl/9nCmHV",
-        label: "Shapes, Geometric Forms in Graphic Design",
+        label: "Shapes, Geometric Forms <br/> in Graphic Design",
         date: "Feb 2017",
       },
       {
         name: "Viction:ary",
         link: "https://victionary.com/products/less-is-more?variant=35147565498530",
-        label: "Less is More, Limited colour graphics in design",
+        label: "Less is More, Limited colour <br/> graphics in design",
         date: " Mar 2017",
       },
       {
         name: "Send Points",
         link: "https://goo.gl/XEHA1z",
-        label: "Remarkable graphic styles — Void",
+        label: "Remarkable graphic styles <br/>— Void",
         date: "Oct 2018",
       },
     ],
@@ -206,17 +222,34 @@ export default {
     title: "Press",
     content: [
       {
+        name: "Work & Co",
+        link: "https://work.co/news/havaianas-flip-flop-concept-store-sao-paulo-brazil/",
+        label: "Havaianas and Work & Co <br/>Launch New Retail Concept",
+        // author: "by Work & Co",
+        date: "Jan 16th, 2020",
+      },
+
+      {
+        name: "Ad Age",
+        link: "https://adage.com/article/cmo-strategy/havaianas-steps-new-store-design-work-co/2226491",
+        label: "Havaianas steps into new  <br/>store design with Work & Co",
+        author: "by Adrianne Pasquarelli",
+        date: "Jan 13th, 2020",
+      },
+
+      {
         name: "99U",
         link: "https://goo.gl/75uCms",
         label:
-          "Get Noticed in a Crowded Marketplace By Challenging the Design Tropes",
+          "Get Noticed in a Crowded <br/> Marketplace By Challenging <br/> the Design Tropes",
         author: "by Matt McCue",
         date: "Jun 2016",
       },
+
       {
         name: "AIGA Eye on Design",
         link: "https://goo.gl/A8wEzq",
-        label: "Happy Hour: Worldly brews and wines",
+        label: "Happy Hour: Worldly brews <br/> and wines",
         author: "by Sophia Ahn",
         date: "Mar 4th, 2016",
       },
@@ -266,6 +299,31 @@ export default {
         name: "Behance",
         label: "Featured in Interaction",
         date: "26 jan 2019",
+      },
+      {
+        link: "https://work.co/news/how-aesop/",
+        name: "HOW",
+        label: "International Website Winner, 2018",
+        date: "May 2018",
+      },
+      {
+        link: "https://www.fastcompany.com/innovation-by-design/2018/company/work-co",
+        name: "Fast Company",
+        label: "Innovation by Design Award, 2018",
+        date: "May 2018",
+      },
+      {
+        link: "https://winners.webbyawards.com/2019/websites-and-mobile-sites/features-design/best-navigationstructure/87014/aesop",
+        name: "NEW Webby Awards",
+        label: "Honoree for Websites and Mobile Sites Shopping 2019, 2019",
+        date: "2019",
+      },
+      {
+        link: "https://winners.webbyawards.com/2019/websites-and-mobile-sites/features-design/best-navigationstructure/87014/aesop",
+        name: "NEW Webby Awards",
+        label:
+          "Nominee for Websites and Mobile Sites Best Navigation/Structure 2019, 2019",
+        date: "2019",
       },
       {
         link: "https://goo.gl/VfrEAJ",

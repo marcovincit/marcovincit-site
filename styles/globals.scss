@@ -10,7 +10,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: acumin-pro, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Editorial New", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 html {
@@ -70,4 +71,8 @@ h6 {
   @include for-size(sm) {
     display: inherit;
   }
+}
+
+.section-scrollable {
+  overflow: auto;
 }
