@@ -151,7 +151,7 @@ function Site() {
         </Page>
 
         <Page
-          size={76}
+          size={90}
           onePage
           active={pageState.press}
           zIndex={pageZIndex.press}
@@ -159,7 +159,7 @@ function Site() {
           {/* PRESS */}
           <section className='section-scrollable'>
             <h3>{data.press.title}</h3>
-            <ul>
+            <ul  className={styles.col}>
  {data.press.content.map(
               ({ link, name, label, author, date }, key) => (
                 <li key={key}>
@@ -188,7 +188,7 @@ function Site() {
           zIndex={pageZIndex.publications}
         >
           {/* PUBLICATIONS */}
-          <section className='section-scrollable'>
+          <section >
             <h3>{data.publications.title}</h3>
             <ul>
               {data.publications.content.map(
