@@ -439,7 +439,7 @@ export default {
         link: "https://goo.gl/uUP1do",
         name: "Site Inspire",
         label: "Featured",
-        date: "11 may 2016",
+        date: "11 may 2016 ",
       },
       {
         link: "https://goo.gl/fkziBY",
