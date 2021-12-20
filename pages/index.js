@@ -5,16 +5,9 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const list = [
-  { name: "Spotify", logo: "spotify.svg", link: "http://spotify.com" },
-  {
-    name: "YouTube Music",
-    logo: "youtubemusic.svg",
-    link: "http://spotify.com",
-  },
-  { name: "Apple Music", logo: "applemusic.svg", link: "http://spotify.com" },
-  { name: "SoundCloud", logo: "soundcloud.svg", link: "http://spotify.com" },
-  { name: "Deezer", logo: "deezer.svg", link: "http://spotify.com" },
-  { name: "Tidal", logo: "tidal.svg", link: "http://spotify.com" },
+  { name: "Novo Single - Tô a Fim", link: "https://ffm.to/toafim" },
+  { name: "EP - Quando o Dia Terminar", link: "/quando-o-dia-terminar" },
+  { name: "Single - O Mar", link: "/o-mar" },
 ];
 
 export default function Home() {
@@ -32,23 +25,20 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Marco Vincit - O mar</title>
-        <link rel="icon" href="/cover.jpg" />
+        <title>Marco Vincit</title>
+        <link rel="icon" href="/home/cover.jpg" />
       </Head>
 
       <main ref={refContainer} className={styles.container}>
         <div className={styles.colAlbum}>
-          <h1 className={styles.title01}>
-            Novo <br /> single
-          </h1>
-          <img
-            className={styles.cover}
-            alt="Marco Vincit - O mar"
-            src="/cover.jpg"
-          />
-          <h1 className={styles.title02}>
-            Ouça <br /> agora
-          </h1>
+          <img className={styles.cover} alt="Marco Vincit" src="/profile.jpg" />
+
+          <a
+            className={styles.title02}
+            href="https://www.instagram.com/marcovincit/"
+          >
+            @marcovincit
+          </a>
         </div>
         <div className={styles.colList}>
           <ul className={styles.list}>
@@ -60,11 +50,7 @@ export default function Home() {
                   href={link}
                   target="_blank"
                 >
-                  <img
-                    className={styles.logo}
-                    alt={name}
-                    src={"/logos/" + logo}
-                  />
+                  {name}
                 </a>
               </li>
             ))}

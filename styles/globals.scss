@@ -21,15 +21,22 @@ html {
 
 body {
   font-size: 3.2rem;
-  background-image: url("/bg-mobile.png");
-  background-attachment: fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   @media (min-width: 1000px) {
     font-size: 1.6rem;
-    background-image: url("/bg-01.png");
+
     background-size: 15%;
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1 {
