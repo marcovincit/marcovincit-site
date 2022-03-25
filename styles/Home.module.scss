@@ -1,42 +1,66 @@
-.close {
-  width: 10rem;
-  height: 10rem;
+@import "./breakpoints.scss";
 
-  position: absolute;
-  top: 0;
-  left: 0;
+.main {
+  position: relative;
+  z-index:0;
+  display:flex;
+  align-items: flex-start;
+  
+  
+  > * {
+    @include for-size(lg) {
+    width: 50%}
+  }
+}
 
-  cursor: se-resize;
+.section {
+  padding:10rem 2rem  10rem 2rem;
+  &:last-child {
+    padding:10rem 2rem  30rem 2rem;
+  }
 
-  @media only screen and (max-width: 1068px) {
-    width: 100%;
-    display: flex;
-    &::before {
-      content: "↘";
-      font-size: 3.2rem;
-      padding: 2rem;
+
+  @include for-size(lg) {
+    padding:28rem 5rem  10rem 0;
+    &:last-child {
+      padding:28rem 5rem  30rem 0;
     }
   }
 }
 
-.aboutImageContainer {
-  // background: var(--background-color);
-  position: relative;
+.col {
+  column-count: 1;
+  column-gap: 5rem;
+  // text-align: justify;
+  // text-justify: inter-word;
+
+  @include for-size(md) {
+    column-count: 3;
+  }
 }
 
-.aboutImage {
-  opacity: 1;
-  width: 100%;
-  mix-blend-mode: luminosity;
+.grid {
+  display:grid;
+  gap:5rem;
+  grid-template-columns: repeat(2, 1fr);
+
+
+  @include for-size(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.col,
-.simpleList {
-  column-count: 2;
-}
 
-.simpleList {
-  li {
-    margin-bottom: 0.5rem !important;
+.image {
+  // margin:2rem;
+  width: calc(100% - 4rem);
+
+  @include for-size(md) {
+    width: calc(100% / 3 * 2  - 2rem);
+    // margin-left:  calc(100% / 3 * 1  + 8rem);
+  }
+
+  @include for-size(lg) {
+    width: calc(100% / 3  - 10rem);
   }
 }

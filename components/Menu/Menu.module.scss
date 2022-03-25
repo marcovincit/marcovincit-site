@@ -2,10 +2,19 @@
 
 .menu {
   min-height: 100vh;
-  display: flex;
+  display: none;
   align-items: center;
   padding: 5rem;
   margin:0;
+  
+  position: sticky;
+  top:0;
+  left:0;
+
+
+  @include for-size(lg) {
+    display: flex;
+  }
 
   ul,
   li {
@@ -19,6 +28,7 @@
 
     li {
       display: block;
+      transition: opacity 600ms;
 
       a {
         display: block;
@@ -26,6 +36,7 @@
         font-weight: 200;
         letter-spacing: -0.075em;
         margin-left: -0.09em;
+        
 
         @include for-size(md) {
           font-size: 9.6rem;
@@ -43,11 +54,14 @@
     }
 
     &:hover {
+
       li {
         opacity: 0.1;
         transition: opacity 150ms;
         &:hover {
           opacity: 1;
+          
+          
         }
       }
     }

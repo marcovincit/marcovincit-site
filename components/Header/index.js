@@ -16,15 +16,15 @@ export function Header() {
             Design & Development
           </a>
         </h2>
-        <h3 className="hide-xs">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.google.com/search?q=S%C3%A3o+Paulo%2C+SP"
-          >
-            São Paulo, Brazil
-          </a>
-        </h3>
+
+        <a
+          className="hide-xs"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.google.com/search?q=S%C3%A3o+Paulo%2C+SP"
+        >
+          São Paulo, Brazil
+        </a>
       </div>
     </header>
   );

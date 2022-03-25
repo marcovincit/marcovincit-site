@@ -146,8 +146,8 @@ export default {
         date: "Jul 2021 – Present",
         name: "CodeSandbox",
         label: "Senior Designer",
-        location: "Sao Paulo, Brazil",
-        link: "#",
+        location: "Amsterdam, Netherlands",
+        link: "https://codesandbox.io/",
       },
 
       {
@@ -155,7 +155,7 @@ export default {
         name: "Open Co",
         label: "Head of Design",
         location: "Sao Paulo, Brazil",
-        link: "#",
+        link: "https://www.open-co.com/en",
       },
 
       {
@@ -163,7 +163,7 @@ export default {
         name: "Work & Co",
         label: "Senior Designer",
         location: "Sao Paulo, Brazil",
-        link: "#",
+        link: "https://work.co/",
       },
 
       {
@@ -179,7 +179,7 @@ export default {
         name: "Plan B Comunicação",
         label: "Designer",
         location: "Belo Horizonte, Brazil",
-        link: "#",
+        link: "https://www.planb.com.br/",
       },
 
       {
@@ -187,7 +187,7 @@ export default {
         name: "Quartel Design",
         label: "Front-end Engineer",
         location: "Belo Horizonte, Brazil",
-        link: "#",
+        link: "https://quarteldesign.com/",
       },
     ],
   },
