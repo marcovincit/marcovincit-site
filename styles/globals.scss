@@ -1,13 +1,7 @@
 @import url("https://use.typekit.net/dkl1ast.css");
 @import "./breakpoints.scss";
 
-@font-face {
-  font-family: "Editorial New";
-  src: url("/editorialnew-variable-webfont.woff2") format("woff2"),
-    url("/editorialnew-variable-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 ::selection {
   color: inherit !important;
@@ -18,8 +12,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Editorial New", "Helvetica Neue", "Helvetica", "Arial",
-    sans-serif;
+  font-family:"acumin-pro", sans-serif;
+  font-weight: 300;
 }
 
 html {
@@ -32,25 +26,45 @@ html {
 
 body {
   // colors
-  background-color: var(--text-color);
-  color: var(--background-color);
+  background-color: var(--text-color)!important;
+  color: var(--background-color)!important;
   @media (prefers-color-scheme: dark) {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background-color)!important;
+    color: var(--text-color)!important;
   }
 }
 
-#__next {
-  @include for-size(lg) {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
+ul, li {
+  list-style: none;
+  margin:0;
+  padding:0;
 }
 
 a {
-  color: inherit;
+ &, &:visited {
+  color: var(--background-color)!important;
   text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--text-color)!important;
+  }
+ }
+}
+
+p  {
+  font-size:1.6rem;
+
+  &:first-child {
+    margin-top:0
+  }
+  
+  a {
+    text-decoration:underline;
+  }
+}
+
+li {
+  font-size:1.6rem;
 }
 
 * {
@@ -61,15 +75,29 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-size: 1.6rem;
   @include for-size(lg) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   font-weight: 300;
   margin: 0;
   padding: 0;
+}
+
+h3 {
+  font-size: 6.4rem;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  margin: 6rem 0;
+  padding: 0;
+
+
+  @include for-size(lg) {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+ 
 }
 
 .hide-xs {
@@ -83,4 +111,14 @@ h6 {
 
 .section-scrollable {
   overflow: auto;
+}
+
+
+i {
+  font-family:"cormorant-garamond";
+}
+
+
+b {
+  font-weight: 400;
 }
