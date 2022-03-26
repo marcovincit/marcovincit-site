@@ -13,6 +13,9 @@ export function Menu() {
   return (
     <menu className={styles.menu}>
       <ul>
+        <ActiveLink href="#">
+          <span>Index</span>
+        </ActiveLink>
 
         <ActiveLink href="#About">
           <span>About</span>

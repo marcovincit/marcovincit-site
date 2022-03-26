@@ -33,17 +33,33 @@
   column-gap: 5rem;
   // text-align: justify;
   // text-justify: inter-word;
+  
+ 
 
   @include for-size(md) {
     column-count: 3;
   }
 }
 
+
+
+
 .grid {
   display:grid;
   gap:5rem;
   grid-template-columns: repeat(2, 1fr);
 
+
+  // &:hover {
+  //   li {
+  //     opacity: .2;
+
+  //     &:hover {
+  //       opacity: 1
+  //     }
+  //   }
+  // }
+  
 
   @include for-size(md) {
     grid-template-columns: repeat(3, 1fr);
@@ -54,6 +70,8 @@
 .image {
   width: 100%;
   padding:2rem;
+  position: sticky;
+  top:0;
 
   @include for-size(md) {
     width: calc(100% / 3 * 2);

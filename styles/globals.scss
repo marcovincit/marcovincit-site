@@ -20,6 +20,10 @@ html {
   font-size: 10px;
 
   @include for-size(lg) {
+    font-size: calc(100vh / 810 * 10);
+  }
+  
+  @include for-size(xl) {
     font-size: calc(100vh / 1080 * 10);
   }
 }
