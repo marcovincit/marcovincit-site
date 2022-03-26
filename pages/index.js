@@ -25,12 +25,14 @@ export default function Home() {
             </div>
           </section>
 
-          <Image
-            width={200}
-            height={200}
-            className={styles.image}
-            src="/about.jpg"
-          />
+          <div className={styles.image}>
+            <Image
+              width={600}
+              height={900}
+              layout="responsive"
+              src="/about.jpg"
+            />
+          </div>
 
           {/* EXPERIENCE */}
           <section id={data.experience.title} className={styles.section}>
