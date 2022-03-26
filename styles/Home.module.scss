@@ -52,15 +52,16 @@
 
 
 .image {
-  // margin:2rem;
-  width: calc(100% - 4rem);
+  width: 100%;
+  padding:2rem;
 
   @include for-size(md) {
-    width: calc(100% / 3 * 2  - 2rem);
-    // margin-left:  calc(100% / 3 * 1  + 8rem);
+    width: calc(100% / 3 * 2);
   }
 
   @include for-size(lg) {
-    width: calc(100% / 3  - 10rem);
+    width: calc(100% / 3 * 2 - 5rem);
+    padding:0;
+    margin-left: calc(100% / 3);
   }
 }
