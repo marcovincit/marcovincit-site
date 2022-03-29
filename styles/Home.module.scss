@@ -54,6 +54,10 @@
 .image {
   width: 100%;
   padding:2rem;
+ 
+ img {
+    opacity:.9
+ }
 
   @include for-size(md) {
     width: calc(100% / 3 * 2);

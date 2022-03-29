@@ -22,16 +22,91 @@ html {
   @include for-size(lg) {
     font-size: calc(100vh / 1080 * 10);
   }
+  
+  
+  
+}
+
+
+@keyframes opening {
+  0% {clip-path: inset(0% 0% 0% 0%)}
+  99% {clip-path: inset(100% 0% 0% 0%); display:block;}
+  100% {clip-path: inset(100% 0% 0% 0%); display:none;}
+}
+
+
+@keyframes fadeOut {
+  20% { opacity: 0}
+  40% { opacity: 1}
+  85% { opacity: 1}
+  100% { opacity: 0}
 }
 
 body {
   // colors
-  background-color: var(--text-color)!important;
-  color: var(--background-color)!important;
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--background-color)!important;
-    color: var(--text-color)!important;
+  background-color: var(--background-color)!important;
+  color: var(--text-color)!important;
+  
+
+  
+  &:before {
+    content: "";
+    pointer-events:none;
+    // font-family:"cormorant-garamond";
+    // font-style:italic;
+    font-weight:200;
+    font-size: 2.4rem;
+    letter-spacing: -0.0125em;
+    
+     color: var(--background-color);
+     background-color: var(--text-color);
+     
+     position:fixed;
+     top:0;
+     left:0;
+     z-index:9999;
+     
+     width: 100%;
+     height: 100%;
+     
+     display:flex;
+     align-items:center;
+     align-content:center;
+     justify-content:center;
+     
+     
+     animation: opening 4s 1s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards;
   }
+  
+  &:after {
+    content: "Marco Vincit";
+    pointer-events:none;
+    // font-family:"cormorant-garamond";
+    // font-style:italic;
+    font-weight:200;
+    font-size: 2.4rem;
+    letter-spacing: -0.0125em;
+    
+     color: var(--background-color);
+     
+     position:fixed;
+     top:0;
+     left:0;
+     z-index:9999;
+     
+     width: 100%;
+     height: 100%;
+     
+     display:flex;
+     align-items:center;
+     align-content:center;
+     justify-content:center;
+     
+     opacity: 0;
+     animation: fadeOut 2.5s  forwards;
+  }
+  
+  
 }
 
 ul, li {
@@ -42,12 +117,12 @@ ul, li {
 
 a {
  &, &:visited {
-  color: var(--background-color)!important;
+  color: var(--color)!important;
   text-decoration: none;
 
-  @media (prefers-color-scheme: dark) {
-    color: var(--text-color)!important;
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   color: var(--text-color)!important;
+  // }
  }
 }
 
