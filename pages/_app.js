@@ -4,22 +4,22 @@ import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   // colors
-  // const [background, setBackground] = useState(0);
-  // const [color, setColor] = useState(0);
+  const [background, setBackground] = useState(0);
+  const [color, setColor] = useState(0);
 
-  // const min = 0;
-  // const max = 360;
+  const min = 0;
+  const max = 360;
 
-  // useEffect(() => {
-  //   setBackground(Math.round(min + Math.random() * (max - min)));
-  //   setColor(Math.round(min + Math.random() * (max - min)));
-  // }, []);
+  useEffect(() => {
+    setBackground(Math.round(min + Math.random() * (max - min)));
+    setColor(Math.round(min + Math.random() * (max - min)));
+  }, []);
 
-  // useEffect(() => {
-  //   const root = document.querySelector(":root");
-  //   root.style.setProperty("--text-color", `hsl(${color}, 30%, 80%)`);
-  //   root.style.setProperty("--background-color", `hsl(${background}, 40%, 10%)`);
-  // }, [color, background]);
+  useEffect(() => {
+    const root = document.querySelector(":root");
+    root.style.setProperty("--text-color", `hsl(${color}, 0%, 0%)`);
+    root.style.setProperty("--background-color", `hsl(${color}, 0%, 100%)`);
+  }, [color, background]);
 
   return (
     <>

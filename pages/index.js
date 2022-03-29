@@ -1,11 +1,13 @@
 import styles from "styles/Home.module.scss";
 import data from "data/about";
 import parse from "html-react-parser";
-import Image from "next/image";
-
+import { motion, useReducedMotion } from "framer-motion";
+import { easeInOutQuint } from "utils/easing";
 import { Header, Menu, Footer } from "components";
 
 export default function Home() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <>
       <Header />
@@ -15,12 +17,32 @@ export default function Home() {
 
         <main className={styles.content}>
           <div className={`${styles.image}`}>
-            <Image
-              width={600}
-              height={900}
-              layout="responsive"
-              src="/about.jpg"
-            />
+            <motion.div
+              initial={{ clipPath: `inset(0% 0% 100% 0%)` }}
+              transition={{
+                duration: shouldReduceMotion ? 0 : 2.5,
+                delay: shouldReduceMotion ? 0 : 2,
+                ease: easeInOutQuint,
+              }}
+              animate={{ clipPath: `inset(0% 0% 0% 0%)` }}
+              style={{
+                background: `var(--background-color)!important`,
+              }}
+            >
+              <motion.img
+                width="100%"
+                height="auto"
+                layout="responsive"
+                src="/about.jpg"
+                initial={{ scale: 1.5 }}
+                transition={{
+                  duration: shouldReduceMotion ? 0 : 3,
+                  delay: shouldReduceMotion ? 0 : 1,
+                  ease: easeInOutQuint,
+                }}
+                animate={{ scale: 1 }}
+              />
+            </motion.div>
           </div>
 
           {/* ABOUT */}
