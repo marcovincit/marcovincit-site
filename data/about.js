@@ -3,7 +3,7 @@ export default {
     title: "About",
     content: [
       `I was born and raised in <a href="https://en.wikipedia.org/wiki/Brumadinho" target="_blank" rel="noopener noreferrer">Brumadinho</a>, <a href="https://en.wikipedia.org/wiki/Minas_Gerais" target="_blank" rel="noopener noreferrer">Minas Gerais</a>, and my design inspirations came from my small town. There has beautiful mountains, sunsets, mist, and <a href="https://en.wikipedia.org/wiki/Inhotim" target="_blank" rel="noopener noreferrer">Inhotim Institute</a>, a mix of park and museum. <a href="https://en.wikipedia.org/wiki/Inhotim" target="_blank" rel="noopener noreferrer">Inhotim</a> is one of the most important collections of contemporary art and the largest outdoor art center in Latin America.`,
-      "When I was a child, I spent a lot of time discovering how fantastic a computer is and creating some aleatory things on Microsoft Paint.",
+      "When I was a child, I spent a lot of time discovering how fantastic a computer is and creating random things on Microsoft Paint.",
       `Currently I live in <a href="https://www.google.com/search?q=S%C3%A3o+Paulo%2C+SP" target="_blank" rel="noopener noreferrer">São Paulo</a>, a city that always surprises me, with good food, art and music.`,
       "I love graphic design, modernism, and contemporary art. One of the most important things that I need to do is give more meaning to brands, creating a simple design to solve real problems for real people.",
       "I always try to bring art and graphic design references to the digital universe with smooth interactions, creating an immersive experience.",
