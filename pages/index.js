@@ -14,6 +14,15 @@ export default function Home() {
         <Menu />
 
         <main className={styles.content}>
+          <div className={`${styles.image}`}>
+            <Image
+              width={600}
+              height={900}
+              layout="responsive"
+              src="/about.jpg"
+            />
+          </div>
+
           {/* ABOUT */}
           <section id={data.about.title} className={styles.section}>
             <h3>{data.about.title}</h3>
@@ -24,15 +33,6 @@ export default function Home() {
               ))}
             </div>
           </section>
-
-          <div className={styles.image}>
-            <Image
-              width={600}
-              height={900}
-              layout="responsive"
-              src="/about.jpg"
-            />
-          </div>
 
           {/* EXPERIENCE */}
           <section id={data.experience.title} className={styles.section}>

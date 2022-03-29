@@ -21,9 +21,9 @@
 
 
   @include for-size(lg) {
-    padding:28rem 5rem  10rem 0;
+    padding:10rem 5rem  10rem 0;
     &:last-child {
-      padding:28rem 5rem  30rem 0;
+      padding:10rem 5rem  30rem 0;
     }
   }
 }
@@ -60,8 +60,13 @@
   }
 
   @include for-size(lg) {
-    width: calc(100% / 3 * 2 - 5rem);
-    padding:0;
-    margin-left: calc(100% / 3);
+    width: calc(100% / 3 * 2);
+    height:100vh;
+    padding:10rem;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
   }
 }
