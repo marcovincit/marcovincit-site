@@ -134,34 +134,15 @@ export default function Home() {
             <div>
               <h3>{data.awards.title}</h3>
               <ul className={styles.grid}>
-                {data.awards.content.map(({ link, name, label, date }, key) =>
-                  key < 14 ? (
-                    <li data-scroll key={key}>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
-                        {name} <br /> {label} <br /> <i>{date}</i>{" "}
-                      </a>
-                    </li>
-                  ) : null
-                )}
+                {data.awards.content.map(({ link, name, label, date }, key) => (
+                  <li data-scroll key={key}>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                      {name} <br /> {label} <br /> <i>{date}</i>{" "}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-
-            <div>
-              <br />
-              <br />
-              <ul className={styles.grid}>
-                {data.awards.content.map(({ link, name, label, date }, key) =>
-                  key >= 14 && key <= 27 ? (
-                    <li data-scroll key={key}>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
-                        {name} <br /> {label} <br /> <i>{date}</i>{" "}
-                      </a>
-                    </li>
-                  ) : null
-                )}
-              </ul>
-            </div>
-            <div className={styles.close} onClick={() => close("featured")} />
           </section>
         </main>
       </div>
