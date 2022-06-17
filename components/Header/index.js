@@ -6,8 +6,8 @@ export function Header() {
       <h1>
         <a>Marco Vincit</a>
       </h1>
-      <div className={styles.content}>
-        <h2>
+      
+        <h2 className={styles.item2}>
           <a
             target="_blank"
             rel="noreferrer"
@@ -17,15 +17,18 @@ export function Header() {
           </a>
         </h2>
 
+
+<h2 className={`hide-xs ${styles.item3}`}>
         <a
-          className="hide-xs"
+        
+  
           target="_blank"
           rel="noreferrer"
           href="https://www.google.com/search?q=S%C3%A3o+Paulo%2C+SP"
         >
           São Paulo, Brazil
-        </a>
-      </div>
+        </a></h2>
+     
     </header>
   );
 }

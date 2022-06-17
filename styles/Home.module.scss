@@ -1,32 +1,7 @@
 @import "./breakpoints.scss";
 
-.main {
-  position: relative;
-  z-index:0;
-  display:flex;
-  align-items: flex-start;
-  
-  
-  > * {
-    @include for-size(lg) {
-    width: 50%}
-  }
-}
-
-.section {
-  padding:10rem 2rem  10rem 2rem;
-  &:last-child {
-    padding:10rem 2rem  30rem 2rem;
-  }
 
 
-  @include for-size(lg) {
-    padding:10rem 5rem  10rem 0;
-    &:last-child {
-      padding:10rem 5rem  30rem 0;
-    }
-  }
-}
 
 .col {
   column-count: 1;
@@ -43,10 +18,15 @@
   display:grid;
   gap:5rem;
   grid-template-columns: repeat(2, 1fr);
+  padding: 5rem;
 
 
   @include for-size(md) {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @include for-size(lg) {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -73,4 +53,9 @@
     align-items: stretch;
     justify-content: center;
   }
+}
+
+
+.noListMargin {
+    margin-top: 0;
 }
