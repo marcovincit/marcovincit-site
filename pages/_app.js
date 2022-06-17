@@ -2,24 +2,33 @@ import "styles/globals.scss";
 import Head from "next/head";
 import { useState, useEffect } from "react";
 
+
+const colors = [
+    // {background: "#211011", text:"#7B70A3", hover:"blue"},
+    // {background: "#142314", text:"#768BA7", hover:"blue"},
+    {background: "#FEFEFE", text:"#333333", hover:"blue"}
+
+]
+
 function MyApp({ Component, pageProps }) {
+    
   // colors
-  const [background, setBackground] = useState(0);
-  const [color, setColor] = useState(0);
+  const [colorScheme, setColorScheme] = useState(0);
 
   const min = 0;
-  const max = 360;
+  const max = colors.length-1;
 
   useEffect(() => {
-    setBackground(Math.round(min + Math.random() * (max - min)));
-    setColor(Math.round(min + Math.random() * (max - min)));
+    setColorScheme(Math.round(min + Math.random() * (max - min)));
+    
   }, []);
 
   useEffect(() => {
     const root = document.querySelector(":root");
-    root.style.setProperty("--text-color", `hsl(${color}, 0%, 0%)`);
-    root.style.setProperty("--background-color", `hsl(${color}, 0%, 100%)`);
-  }, [color, background]);
+    root.style.setProperty("--text-color", `${colors[colorScheme].text}`);
+    root.style.setProperty("--background-color", `${colors[colorScheme].background}`);
+    root.style.setProperty("--hover-color", `${colors[colorScheme].hover}`);
+  }, [colorScheme]);
 
   return (
     <>

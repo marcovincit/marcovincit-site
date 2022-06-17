@@ -48,63 +48,64 @@ body {
   color: var(--text-color)!important;
   
 
+
   
-  &:before {
-    content: "";
-    pointer-events:none;
-    // font-family:"cormorant-garamond";
-    // font-style:italic;
-    font-weight:200;
-    font-size: 2.4rem;
-    letter-spacing: -0.0125em;
+//   &:before {
+//     content: "";
+//     pointer-events:none;
+//     // font-family:"cormorant-garamond";
+//     // font-style:italic;
+//     font-weight:200;
+
+//     letter-spacing: -0.0125em;
     
-     color: var(--background-color);
-     background-color: var(--text-color);
+//      color: var(--background-color);
+//      background-color: var(--text-color);
      
-     position:fixed;
-     top:0;
-     left:0;
-     z-index:9999;
+//      position:fixed;
+//      top:0;
+//      left:0;
+//      z-index:9999;
      
-     width: 100%;
-     height: 100%;
+//      width: 100%;
+//      height: 100%;
      
-     display:flex;
-     align-items:center;
-     align-content:center;
-     justify-content:center;
+//      display:flex;
+//      align-items:center;
+//      align-content:center;
+//      justify-content:center;
      
      
-     animation: opening 4s 1s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards;
-  }
+//      animation: opening 4s 1s cubic-bezier(0.860, 0.000, 0.070, 1.000) forwards;
+//   }
   
-  &:after {
-    content: "Marco Vincit";
-    pointer-events:none;
-    // font-family:"cormorant-garamond";
-    // font-style:italic;
-    font-weight:200;
-    font-size: 2.4rem;
-    letter-spacing: -0.0125em;
+//   &:after {
+//     content: "Marco Vincit";
+//     pointer-events:none;
+//     // font-family:"cormorant-garamond";
+//     // font-style:italic;
+//     font-weight:200;
+
+//     letter-spacing: -0.0125em;
     
-     color: var(--background-color);
+//      color: var(--background-color);
      
-     position:fixed;
-     top:0;
-     left:0;
-     z-index:9999;
+//      position:fixed;
+//      top:0;
+//      left:0;
+//      z-index:9999;
      
-     width: 100%;
-     height: 100%;
+//      width: 100%;
+//      height: 100%;
      
-     display:flex;
-     align-items:center;
-     align-content:center;
-     justify-content:center;
+//      display:flex;
+//      align-items:center;
+//      align-content:center;
+//      justify-content:center;
      
-     opacity: 0;
-     animation: fadeOut 2.5s  forwards;
-  }
+//      opacity: 0;
+//      animation: fadeOut 2.5s  forwards;
+//   }
   
   
 }
@@ -127,7 +128,6 @@ a {
 }
 
 p  {
-  font-size:1.6rem;
 
   &:first-child {
     margin-top:0
@@ -139,7 +139,7 @@ p  {
 }
 
 li {
-  font-size:1.6rem;
+  margin-top:1em;
 }
 
 * {
@@ -151,25 +151,28 @@ h2,
 h3,
 h4,
 h5 {
-  font-size: 1.6rem;
-  @include for-size(lg) {
-    font-size: 1.6rem;
-  }
+  
+
+
+line-height: 130%;
+
+letter-spacing: -0.025em;
+
   font-weight: 300;
   margin: 0;
   padding: 0;
 }
 
 h3 {
-  font-size: 6.4rem;
-  letter-spacing: -0.05em;
+   
+font-style: italic;
+  letter-spacing: -0.0125em;
   font-weight: 300;
   margin: 2rem 0 2rem;
   padding: 0;
 
 
   @include for-size(lg) {
-    font-size: 1rem;
     margin: 1rem 0;
   }
  
@@ -189,11 +192,30 @@ h3 {
 }
 
 
-i {
+i, h3 {
   font-family:"cormorant-garamond";
 }
 
 
 b {
   font-weight: 400;
+}
+
+a {
+    transition: color 200ms;
+    &:hover {
+    color: var(--hover-color)!important;
+}
+}
+
+
+
+
+
+* {
+      font-size: 1.4rem;
+  @include for-size(lg) {
+    font-size: 1.6rem;
+  }
+  
 }

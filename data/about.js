@@ -303,26 +303,26 @@ export default {
       {
         link: "https://work.co/news/how-aesop/",
         name: "HOW",
-        label: "International Website Winner, 2018",
+        label: "International Website Winner",
         date: "May 2018",
       },
       {
         link: "https://www.fastcompany.com/innovation-by-design/2018/company/work-co",
         name: "Fast Company",
-        label: "Innovation by Design Award, 2018",
+        label: "Innovation by Design Award",
         date: "May 2018",
       },
       {
         link: "https://winners.webbyawards.com/2019/websites-and-mobile-sites/features-design/best-navigationstructure/87014/aesop",
         name: "NEW Webby Awards",
-        label: "Honoree for Websites and Mobile Sites Shopping 2019, 2019",
+        label: "Honoree for Websites and Mobile Sites Shopping",
         date: "2019",
       },
       {
         link: "https://winners.webbyawards.com/2019/websites-and-mobile-sites/features-design/best-navigationstructure/87014/aesop",
         name: "NEW Webby Awards",
         label:
-          "Nominee for Websites and Mobile Sites Best Navigation/Structure 2019, 2019",
+          "Nominee for Websites and Mobile Sites Best Navigation/Structure",
         date: "2019",
       },
       {
