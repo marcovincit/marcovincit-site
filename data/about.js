@@ -101,14 +101,14 @@ export default {
         name: "11th Bēhance Reviews",
         type: "Identity & Web",
         date: "May 2017",
-        link: "https://behancereviewsbh11.netlify.app/",
+        link: "https://behance-reviews-11.vercel.app/",
       },
 
       {
         name: "10th Bēhance Reviews",
         type: "Identity & Web",
         date: "Oct 2016",
-        link: "https://behancereviewsbh10.netlify.app/",
+        link: "https://behance-reviews-10.vercel.app/",
       },
       {
         name: "9th Bēhance Reviews",
