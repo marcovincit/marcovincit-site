@@ -21,10 +21,11 @@
   display:grid;
   gap:5rem;
   grid-template-columns: repeat(2, 1fr);
-  padding: 5rem;
+  padding: 2rem;
 
 
   @include for-size(md) {
+      padding: 5rem;
     grid-template-columns: repeat(3, 1fr);
   }
   
@@ -35,7 +36,7 @@
  
 
 
-  padding: 5rem;
+
   
 
   @include for-size(md) {
